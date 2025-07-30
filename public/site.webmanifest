@@ -1,0 +1,22 @@
+{
+  "name": "Humble Band - Raw Energy & Soulful Melodies",
+  "short_name": "Humble Band",
+  "description": "Experience the raw energy and soulful melodies that define our sound. Join us on a musical journey that speaks to the heart.",
+  "icons": [
+    {
+      "src": "/android-chrome-192x192.png",
+      "sizes": "192x192",
+      "type": "image/png"
+    },
+    {
+      "src": "/android-chrome-512x512.png",
+      "sizes": "512x512",
+      "type": "image/png"
+    }
+  ],
+  "theme_color": "#f97316",
+  "background_color": "#000000",
+  "display": "standalone",
+  "start_url": "/",
+  "scope": "/"
+}
