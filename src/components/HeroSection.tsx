@@ -1,7 +1,6 @@
 "use client"
 import { Button } from '@/components/ui/button';
 import { Play, Music2 } from 'lucide-react';
-import Image from 'next/image';
 import { useState } from 'react';
 
 export default function HeroSection() {
@@ -15,12 +14,10 @@ export default function HeroSection() {
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
-        <Image
+        <img
           src="/van.jpg"
           alt="Humble Band Van"
-          fill
-          className="object-cover"
-          priority
+          className="object-cover w-full h-full"
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/55"></div>
@@ -37,7 +34,7 @@ export default function HeroSection() {
               onClick={handleLogoClick}
             >
               {/* Main Logo */}
-              <Image
+              <img
                 src="/logo.png"
                 alt="Humble Band Logo"
                 width={500}

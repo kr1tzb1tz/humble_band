@@ -1,7 +1,6 @@
 'use client';
 
 import { Music, Instagram, Facebook } from 'lucide-react';
-import Image from 'next/image';
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -24,7 +23,7 @@ export default function Footer() {
               onClick={() => scrollToSection('home')} 
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
             >
-              <Image
+              <img
                 src="/logo.png"
                 alt="Humble Band Logo"
                 width={32}
