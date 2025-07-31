@@ -98,6 +98,18 @@ export default function UpcomingShows() {
             </Card>
           ))}
         </div>
+
+        <div className="text-center mt-12">
+          <div className="inline-flex items-center space-x-2 bg-orange-100 px-6 py-3 rounded-full">
+            <span className="text-orange-800 font-medium">Booking & info:</span>
+            <a 
+              href="mailto:bwgorby@gmail.com" 
+              className="text-orange-600 hover:text-orange-800 font-semibold transition-colors"
+            >
+              bwgorby@gmail.com
+            </a>
+          </div>
+        </div>
       </div>
     </section>
   );
