@@ -60,6 +60,14 @@ export default function Footer() {
                   Upcoming Shows
                 </button>
               </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('the-key-is-3')} 
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer text-left"
+                >
+                  The Key is Three
+                </button>
+              </li>
             </ul>
           </div>
 

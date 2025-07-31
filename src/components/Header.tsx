@@ -55,6 +55,12 @@ export default function Header() {
             >
               Upcoming Shows
             </button>
+            <button 
+              onClick={() => scrollToSection('the-key-is-3')} 
+              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
+            >
+              The Key is Three
+            </button>
           </nav>
 
           {/* Mobile Menu Button */}
@@ -85,6 +91,12 @@ export default function Header() {
                 className="block w-full text-left py-2 hover:text-orange-500 transition-colors duration-200 cursor-pointer"
               >
                 Upcoming Shows
+              </button>
+              <button
+                onClick={() => scrollToSection('the-key-is-3')}
+                className="block w-full text-left py-2 hover:text-orange-500 transition-colors duration-200 cursor-pointer"
+              >
+                The Key is Three
               </button>
             </nav>
           </div>
