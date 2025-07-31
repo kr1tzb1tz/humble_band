@@ -1,14 +1,66 @@
 "use client"
 import { Button } from '@/components/ui/button';
 import { Play, Music2 } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useRef, useEffect } from 'react';
 
 export default function HeroSection() {
   const [isPlaying, setIsPlaying] = useState(false);
+  const [isAudioPlaying, setIsAudioPlaying] = useState(false);
+  const [showTrackInfo, setShowTrackInfo] = useState(false);
+  const audioRef = useRef<HTMLAudioElement>(null);
 
-  const handleLogoClick = () => {
-    setIsPlaying(!isPlaying);
+  const handleLogoClick = async () => {
+    if (audioRef.current) {
+      try {
+        if (isAudioPlaying) {
+          audioRef.current.pause();
+          setIsAudioPlaying(false);
+          setShowTrackInfo(false);
+          setIsPlaying(false);
+        } else {
+          await audioRef.current.play();
+          setIsAudioPlaying(true);
+          setShowTrackInfo(true);
+          setIsPlaying(true);
+        }
+      } catch (error) {
+        console.error('Audio playback error:', error);
+      }
+    }
   };
+
+  const handleDropNeedle = async () => {
+    if (audioRef.current) {
+      try {
+        if (isAudioPlaying) {
+          audioRef.current.pause();
+          setIsAudioPlaying(false);
+          setShowTrackInfo(false);
+          setIsPlaying(false);
+        } else {
+          await audioRef.current.play();
+          setIsAudioPlaying(true);
+          setShowTrackInfo(true);
+          setIsPlaying(true);
+        }
+      } catch (error) {
+        console.error('Audio playback error:', error);
+      }
+    }
+  };
+
+  const handleAudioEnded = () => {
+    setIsAudioPlaying(false);
+    setShowTrackInfo(false);
+    setIsPlaying(false);
+  };
+
+  useEffect(() => {
+    // Ensure audio element is properly loaded
+    if (audioRef.current) {
+      audioRef.current.load();
+    }
+  }, []);
 
   return (
     <section id="home" className="relative min-h-screen flex items-center justify-center overflow-hidden">
@@ -27,35 +79,42 @@ export default function HeroSection() {
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-2000">
-          {/* Band Logo - Enhanced Center of Attention */}
+          {/* Band Logo - Vinyl Record Style */}
           <div className="flex justify-center">
             <div 
               className="relative group cursor-pointer"
               onClick={handleLogoClick}
             >
-              {/* Main Logo */}
-              <img
-                src="/logo.png"
-                alt="Humble Band Logo"
-                width={500}
-                height={500}
-                className={`h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 object-contain drop-shadow-2xl animate-pulse group-hover:scale-105 transition-all duration-300 ${
-                  isPlaying ? 'animate-spin-continuous' : ''
-                }`}
-                style={{
-                  filter: 'drop-shadow(0 0 40px rgba(249, 115, 22, 0.9)) drop-shadow(0 0 80px rgba(239, 68, 68, 0.6)) brightness(1.2) contrast(1.3)',
-                }}
-              />
-              
-              {/* Multiple Glow Layers */}
-              <div className={`absolute inset-0 h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 rounded-full blur-2xl opacity-30 animate-pulse ${
-                isPlaying ? 'animate-spin-continuous-reverse' : ''
-              }`}></div>
-              <div className={`absolute inset-0 h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 bg-gradient-to-r from-orange-400 via-red-400 to-pink-400 rounded-full blur-xl opacity-20 animate-pulse ${
+              {/* Vinyl Record Base */}
+              <div className={`h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 rounded-full bg-black border-4 md:border-6 border-gray-800 shadow-2xl ${
                 isPlaying ? 'animate-spin-continuous' : ''
-              }`} style={{ animationDelay: '0.5s' }}></div>
+              }`} style={{
+                filter: isPlaying ? 'drop-shadow(0 0 20px #346703) drop-shadow(0 0 40px #346703)' : 'drop-shadow(0 0 10px #346703)'
+              }}></div>
+              
+              {/* Record Grooves */}
+              <div className={`absolute inset-2 md:inset-3 h-44 w-44 md:h-58 md:w-58 lg:h-74 lg:w-74 rounded-full border border-gray-600 opacity-60 ${
+                isPlaying ? 'animate-spin-continuous' : ''
+              }`}></div>
+              <div className={`absolute inset-4 md:inset-6 h-40 w-40 md:h-52 md:w-52 lg:h-68 lg:w-68 rounded-full border border-gray-600 opacity-40 ${
+                isPlaying ? 'animate-spin-continuous' : ''
+              }`}></div>
+              <div className={`absolute inset-6 md:inset-9 h-36 w-36 md:h-46 md:w-46 lg:h-62 lg:w-62 rounded-full border border-gray-600 opacity-30 ${
+                isPlaying ? 'animate-spin-continuous' : ''
+              }`}></div>
+              
+              {/* Center Label */}
+              <div className={`absolute inset-1/4 h-24 w-24 md:h-32 md:w-32 lg:h-40 lg:w-40 rounded-full bg-white border-2 border-gray-300 shadow-inner ${
+                isPlaying ? 'animate-spin-continuous' : ''
+              }`}>
+                <img
+                  src="/colored-logo.png"
+                  alt="Humble Band Logo"
+                  className="h-full w-full object-contain p-2"
+                />
+              </div>
 
-              {/* Record Player Arm - Fixed */}
+              {/* Record Player Arm */}
               <div className={`absolute top-0 right-0 w-20 h-1 md:w-32 md:h-1.5 bg-gray-400 rounded-full transform origin-left transition-all duration-1000 ${
                 isPlaying ? 'rotate-45 translate-x-6 translate-y-6 md:translate-x-8 md:translate-y-8 opacity-100' : 'rotate-0 translate-x-0 translate-y-0 opacity-0'
               }`}>
@@ -66,32 +125,54 @@ export default function HeroSection() {
                   <div className="absolute bottom-0 w-2 h-1 md:w-2.5 md:h-1 bg-gray-800 rounded-full transform -translate-x-0.5"></div>
                 </div>
               </div>
-
-              {/* Vinyl Record Effect */}
-              <div className={`absolute inset-0 h-48 w-48 md:h-64 md:w-64 lg:h-80 lg:w-80 rounded-full border-2 md:border-4 border-gray-800 opacity-20 ${
-                isPlaying ? 'animate-spin-continuous' : ''
-              }`}></div>
             </div>
           </div>
 
-          {/* Main Title - Commented Out */}
-          {/* <h1 className="text-6xl md:text-8xl font-bold text-white mb-6 drop-shadow-2xl">
-            <span className="bg-gradient-to-r from-orange-500 via-red-500 to-pink-500 bg-clip-text text-transparent">
-              HUMBLE
-            </span>
-            <br />
-            <span className="text-white">BAND</span>
-          </h1> */}
+          {/* Text Section */}
+          <div className="mb-12">
+            <div className="relative">
+              <div className={`transition-all duration-700 ease-in-out ${
+                showTrackInfo ? 'opacity-0 transform -translate-y-4' : 'opacity-100 transform translate-y-0'
+              }`}>
+                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
+                  Experience the raw energy and soulful melodies that define our sound. 
+                  Join us on a musical journey that speaks to the heart.
+                </p>
+              </div>
+              <div className={`absolute inset-0 transition-all duration-700 ease-in-out ${
+                showTrackInfo ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
+              }`}>
+                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
+                  "Brownstones" from our 7/26/25 Greenbriar Brewing Co show on Sal Paradise's anniversary
+                </p>
+              </div>
+            </div>
+          </div>
 
-          {/* Subtitle */}
-          <p className="text-xl md:text-2xl text-gray-200 max-w-2xl mx-auto leading-relaxed drop-shadow-lg">
-            Experience the raw energy and soulful melodies that define our sound. 
-            Join us on a musical journey that speaks to the heart.
-          </p>
-
-
+          {/* Button Section */}
+          <div className="flex justify-center">
+            <Button
+              onClick={handleDropNeedle}
+              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
+            >
+              <Music2 className="mr-3 h-6 w-6" />
+              {isAudioPlaying ? 'Stop' : 'Drop the needle'}
+            </Button>
+          </div>
         </div>
       </div>
+
+      {/* Hidden Audio Element */}
+      <audio 
+        ref={audioRef} 
+        onEnded={handleAudioEnded}
+        onError={(e) => console.error('Audio error:', e)}
+        preload="metadata"
+        controls={false}
+      >
+        <source src="/BrownstonesLive.m4a" type="audio/mp4" />
+        Your browser does not support the audio element.
+      </audio>
 
       {/* Floating Particles Throughout Hero */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
