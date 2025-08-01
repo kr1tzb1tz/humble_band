@@ -45,7 +45,7 @@ export default function TheKeyIs3() {
             The Key is Three
           </h2>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
-            Meet the visionary souls behind the music. Each member brings a unique creative spark, coming together to craft something truly extraordinary.
+            Meet the brothers behind the music. Each member brings a unique creative spark, coming together to craft something truly extraordinary.
           </p>
         </motion.div>
 
