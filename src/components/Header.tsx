@@ -59,7 +59,7 @@ export default function Header() {
               onClick={() => scrollToSection('the-key-is-3')} 
               className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
             >
-              The Key is Three
+              Meet the Band
             </button>
           </nav>
 
@@ -96,7 +96,7 @@ export default function Header() {
                 onClick={() => scrollToSection('the-key-is-3')}
                 className="block w-full text-left py-2 hover:text-orange-500 transition-colors duration-200 cursor-pointer"
               >
-                The Key is Three
+                Meet the Band
               </button>
             </nav>
           </div>

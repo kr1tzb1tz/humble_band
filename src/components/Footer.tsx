@@ -65,7 +65,7 @@ export default function Footer() {
                   onClick={() => scrollToSection('the-key-is-3')} 
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer text-left"
                 >
-                  The Key is Three
+                  Meet the Band
                 </button>
               </li>
             </ul>
