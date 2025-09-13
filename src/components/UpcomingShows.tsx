@@ -1,7 +1,18 @@
 import { Calendar, MapPin, Clock, Music, ExternalLink } from 'lucide-react';
 import { Card, CardContent, CardHeader, CardTitle } from '@/components/ui/card';
 
-const upcomingShows = [
+interface Show {
+  date: string;
+  venue: string;
+  location: string;
+  address: string;
+  time: string;
+  details: string;
+  additionalInfo?: string;
+  icon: React.ReactNode;
+}
+
+const upcomingShows: Show[] = [
   {
     date: 'September 12th',
     venue: 'GearHouse Brewing Co.',
@@ -17,7 +28,8 @@ const upcomingShows = [
     location: 'Sleepy Creek, WV',
     address: 'Sleepy Creek, WV',
     time: '3-4 PM',
-    details: 'More info TBA',
+    details: 'With the Ferd Band and Dirty Grass Players',
+    additionalInfo: 'Our funky drummer Nugget will be the artist at large for the weekend, sitting in with different acts!',
     icon: <Music className="h-5 w-5" />
   },
   {
@@ -92,6 +104,12 @@ export default function UpcomingShows() {
                 {show.details && (
                   <div className="pt-1">
                     <p className="text-sm text-orange-600 font-medium">{show.details}</p>
+                  </div>
+                )}
+                
+                {show.additionalInfo && (
+                  <div className="pt-2 border-t border-gray-200">
+                    <p className="text-sm text-purple-500 italic">{show.additionalInfo}</p>
                   </div>
                 )}
               </CardContent>

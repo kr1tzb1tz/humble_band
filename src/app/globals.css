@@ -179,3 +179,26 @@ body {
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
 }
+
+/* Hero background image responsive positioning */
+.hero-bg-image {
+  object-position: center 30%;
+}
+
+@media (min-width: 640px) {
+  .hero-bg-image {
+    object-position: center center;
+  }
+}
+
+@media (min-width: 768px) {
+  .hero-bg-image {
+    object-position: center center;
+  }
+}
+
+@media (min-width: 1024px) {
+  .hero-bg-image {
+    object-position: center center;
+  }
+}

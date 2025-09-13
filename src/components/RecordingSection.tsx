@@ -42,28 +42,36 @@ export default function RecordingSection() {
                 {/* Main Title */}
                 <div className="space-y-4">
                   <h3 className="text-4xl md:text-6xl font-bold text-white leading-tight">
-                    Recording Soon!
+                    Recording Complete!
                   </h3>
                   <div className="w-24 h-1 bg-gradient-to-r from-orange-400 to-purple-400 mx-auto rounded-full"></div>
                 </div>
 
-                {/* Studio Details */}
-                <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12">
-                  <div className="flex items-center space-x-3 text-orange-400">
-                    <Mic className="h-8 w-8" />
-                    <span className="text-2xl md:text-3xl font-semibold">Studio L</span>
-                  </div>
-                  <div className="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
-                  <div className="flex items-center space-x-3 text-purple-400">
-                    <Calendar className="h-8 w-8" />
-                    <span className="text-2xl md:text-3xl font-semibold">August 2025</span>
+                {/* Main Message */}
+                <div className="space-y-6">
+                  <p className="text-xl md:text-2xl text-gray-200 leading-relaxed max-w-4xl mx-auto">
+                    The energy was at an all-time high and the band really enjoyed itself. 
+                    The tracks are getting mastered now and will soon be streaming!
+                  </p>
+                  
+                  {/* Studio Details */}
+                  <div className="flex flex-col md:flex-row items-center justify-center space-y-4 md:space-y-0 md:space-x-12 pt-4">
+                    <div className="flex items-center space-x-3 text-orange-400">
+                      <Mic className="h-8 w-8" />
+                      <span className="text-2xl md:text-3xl font-semibold">Studio L</span>
+                    </div>
+                    <div className="hidden md:block w-px h-16 bg-gradient-to-b from-transparent via-white/30 to-transparent"></div>
+                    <div className="flex items-center space-x-3 text-purple-400">
+                      <Sparkles className="h-8 w-8" />
+                      <span className="text-2xl md:text-3xl font-semibold">Currently Mastering</span>
+                    </div>
                   </div>
                 </div>
 
                 {/* Call to Action */}
-                <div className="pt-4">
-                  <p className="text-xl md:text-2xl text-gray-300 font-medium">
-                    Be on the lookout for updates!
+                <div className="pt-6">
+                  <p className="text-lg md:text-xl text-gray-300 font-medium">
+                    Stay tuned for the release!
                   </p>
                 </div>
               </div>

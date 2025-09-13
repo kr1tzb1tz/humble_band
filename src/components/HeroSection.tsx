@@ -67,9 +67,9 @@ export default function HeroSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/van.jpg"
-          alt="Humble Band Van"
-          className="object-cover w-full h-full"
+          src="/the-band.jpg"
+          alt="Humble Band"
+          className="w-full h-full object-cover hero-bg-image"
         />
         {/* Overlay for better text readability */}
         <div className="absolute inset-0 bg-black/55"></div>
