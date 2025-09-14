@@ -49,12 +49,43 @@ export default function TheKeyIs3() {
           </p>
         </motion.div>
 
+        {/* Band Members Section */}
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12 mb-16">
+          {photos.map((photo, index) => (
+            <motion.div
+              key={photo.name}
+              initial={{ opacity: 0, y: 50 }}
+              whileInView={{ opacity: 1, y: 0 }}
+              transition={{ duration: 0.8, delay: index * 0.2 }}
+              className="group"
+            >
+              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1">
+                <div className="relative overflow-hidden rounded-xl">
+                  <img
+                    src={photo.src}
+                    alt={photo.alt}
+                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
+                  />
+                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
+                </div>
+                
+                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
+                  <h3 className="text-2xl font-bold mb-2 text-yellow-300">{photo.name}</h3>
+                  <p className="text-sm leading-relaxed opacity-90">
+                    {photo.description}
+                  </p>
+                </div>
+              </div>
+            </motion.div>
+          ))}
+        </div>
+
         {/* Band Bio Section */}
         <motion.div
           initial={{ opacity: 0, y: 30 }}
           whileInView={{ opacity: 1, y: 0 }}
           transition={{ duration: 0.8, delay: 0.2 }}
-          className="max-w-4xl mx-auto mb-16 text-center"
+          className="max-w-5xl mx-auto text-center"
         >
           <div className="relative bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/30 shadow-2xl overflow-hidden">
             {/* Decorative elements */}
@@ -91,36 +122,6 @@ export default function TheKeyIs3() {
             </div>
           </div>
         </motion.div>
-
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8 lg:gap-12">
-          {photos.map((photo, index) => (
-            <motion.div
-              key={photo.name}
-              initial={{ opacity: 0, y: 50 }}
-              whileInView={{ opacity: 1, y: 0 }}
-              transition={{ duration: 0.8, delay: index * 0.2 }}
-              className="group"
-            >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1">
-                <div className="relative overflow-hidden rounded-xl">
-                  <img
-                    src={photo.src}
-                    alt={photo.alt}
-                    className="w-full h-80 object-cover transform group-hover:scale-110 transition-transform duration-500"
-                  />
-                  <div className="absolute inset-0 bg-gradient-to-t from-black/70 via-transparent to-transparent"></div>
-                </div>
-                
-                <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2 text-yellow-300">{photo.name}</h3>
-                  <p className="text-sm leading-relaxed opacity-90">
-                    {photo.description}
-                  </p>
-                </div>
-              </div>
-            </motion.div>
-          ))}
-        </div>
       </div>
     </section>
   );
