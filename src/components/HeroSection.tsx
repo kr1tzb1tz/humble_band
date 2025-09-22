@@ -1,6 +1,6 @@
 "use client"
 import { Button } from '@/components/ui/button';
-import { Play, Music2 } from 'lucide-react';
+import { Play, Music2, Palmtree } from 'lucide-react';
 import { useState, useRef, useEffect } from 'react';
 
 export default function HeroSection() {
@@ -143,14 +143,35 @@ export default function HeroSection() {
                 showTrackInfo ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
               }`}>
                 <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
+                  Preview of "Ghostride" from our debut album releasing on October 3, 2025!
+                </p>
+                {/* OLD DESCRIPTION - COMMENTED OUT
+                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
                   "Brownstones" from our 7/26/25 Greenbriar Brewing Co show on Sal Paradise's anniversary
                 </p>
+                */}
               </div>
             </div>
           </div>
 
           {/* Button Section */}
           <div className="flex justify-center">
+            {/* TROPICAL VERSION */}
+            <Button
+              onClick={handleDropNeedle}
+              className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white py-4 px-8 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 text-lg font-bold border-2 border-yellow-300/30 hover:border-yellow-300/50 relative overflow-hidden"
+            >
+              {/* Tropical Background Pattern */}
+              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-transparent to-yellow-400/20 animate-pulse"></div>
+              <div className="relative flex items-center">
+                <Palmtree className="mr-3 h-6 w-6 text-yellow-300 animate-pulse" />
+                <span className="bg-gradient-to-r from-yellow-200 to-yellow-100 bg-clip-text text-transparent">
+                  {isAudioPlaying ? 'Stop the Vibes' : 'Drop the Needle'}
+                </span>
+              </div>
+            </Button>
+            
+            {/* OLD VERSION - COMMENTED OUT
             <Button
               onClick={handleDropNeedle}
               className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
@@ -158,6 +179,7 @@ export default function HeroSection() {
               <Music2 className="mr-3 h-6 w-6" />
               {isAudioPlaying ? 'Stop' : 'Drop the needle'}
             </Button>
+            */}
           </div>
         </div>
       </div>
@@ -170,7 +192,10 @@ export default function HeroSection() {
         preload="metadata"
         controls={false}
       >
+        <source src="/Ghostride_mix_2_L_MASTERED.wav" type="audio/wav" />
+        {/* OLD AUDIO SOURCE - COMMENTED OUT
         <source src="/BrownstonesLive.m4a" type="audio/mp4" />
+        */}
         Your browser does not support the audio element.
       </audio>
 

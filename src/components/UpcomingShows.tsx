@@ -27,7 +27,7 @@ const upcomingShows: Show[] = [
     venue: 'Sleepy Creek Fall Fest',
     location: 'Sleepy Creek, WV',
     address: 'Sleepy Creek, WV',
-    time: '3-4 PM',
+    time: '7:30-9 PM showtime',
     details: 'With the Ferd Band and Dirty Grass Players',
     additionalInfo: 'Our funky drummer Nugget will be the artist at large for the weekend, sitting in with different acts!',
     icon: <Music className="h-5 w-5" />
