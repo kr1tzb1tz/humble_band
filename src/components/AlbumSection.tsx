@@ -8,24 +8,24 @@ export default function AlbumSection() {
 
   return (
     <ParallaxProvider>
-      <section className="relative min-h-screen overflow-hidden">
-        <ParallaxBanner
-          layers={[
-            {
-              image: '/beach.jpg',
-              speed: -40,
-            },
-            {
-              children: (
-                <div className="absolute inset-0 bg-black/50"></div>
-              ),
-              speed: -10,
-            },
-          ]}
-          className="h-screen"
-        >
-          {/* Content Container - Perfectly Centered */}
-          <div className="relative z-20 h-full w-full flex items-center justify-center px-4 sm:px-6 lg:px-8">
+        <section className="relative min-h-screen overflow-hidden">
+          <ParallaxBanner
+            layers={[
+              {
+                image: '/beach.jpg',
+                speed: -40,
+              },
+              {
+                children: (
+                  <div className="absolute inset-0 bg-black/50"></div>
+                ),
+                speed: -10,
+              },
+            ]}
+            className="min-h-screen"
+          >
+            {/* Content Container - Perfectly Centered */}
+            <div className="relative z-20 min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-0">
             <div className="w-full max-w-7xl">
               <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
               
