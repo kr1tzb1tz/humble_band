@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <HeroSection />
       <AlbumSection />
+      <HeroSection />
       <UpcomingShows />
       <TheKeyIs3 />
       {/* <MerchSection /> */}
