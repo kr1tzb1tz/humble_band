@@ -1,5 +1,5 @@
 "use client"
-import { Calendar, Sparkles, Star } from 'lucide-react';
+import { Star } from 'lucide-react';
 import { useState } from 'react';
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 
@@ -58,7 +58,7 @@ export default function AlbumSection() {
                 {/* Title */}
                 <div className="space-y-4">
                   <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-tight drop-shadow-2xl">
-                    Album
+                    New
                     <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent">
                       Release!
                     </span>
@@ -93,28 +93,15 @@ export default function AlbumSection() {
 
                 {/* Description */}
                 <div className="space-y-6">
-                  <p className="text-xl sm:text-2xl md:text-3xl lg:text-4xl text-white/95 leading-relaxed drop-shadow-xl font-light">
-                    Our debut album is ready and will be streaming everywhere on 
-                    <span className="font-bold text-yellow-300"> October 3rd, 2025!</span>
-                  </p>
-                  
-                  {/* Info Cards */}
-                  <div className="flex flex-col sm:flex-row items-center justify-center lg:justify-start gap-4">
-                    <div className="flex items-center space-x-3 text-white bg-white/20 backdrop-blur-lg px-4 py-3 rounded-xl shadow-xl border border-white/30 w-full sm:w-auto">
-                      <Calendar className="h-6 w-6 text-yellow-300 flex-shrink-0" />
-                      <div className="text-center sm:text-left">
-                        <div className="text-sm font-medium text-yellow-200 uppercase tracking-wider">Release Date</div>
-                        <div className="text-xl font-bold">October 3</div>
-                      </div>
-                    </div>
-                    
-                    <div className="flex items-center space-x-3 text-white bg-white/20 backdrop-blur-lg px-4 py-3 rounded-xl shadow-xl border border-white/30 w-full sm:w-auto">
-                      <Sparkles className="h-6 w-6 text-cyan-300 flex-shrink-0" />
-                      <div className="text-center sm:text-left">
-                        <div className="text-sm font-medium text-cyan-200 uppercase tracking-wider">Mastered By</div>
-                        <div className="text-xl font-bold">Studio L</div>
-                      </div>
-                    </div>
+                  <div className="space-y-4">
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
+                      Our new e.p. - five songs recorded in two days, August 15-16, with 
+                      <span className="font-semibold text-yellow-300"> Rick Witkowski of Crack the Sky</span> at the helm.
+                    </p>
+                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
+                      It's a soulful collection of tunes that we hope you enjoy! The new e.p. is streaming on all platforms 
+                      <span className="font-bold text-yellow-300"> October 3</span>.
+                    </p>
                   </div>
                 </div>
               </div>
