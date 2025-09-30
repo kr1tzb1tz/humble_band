@@ -14,15 +14,6 @@ interface Show {
 
 const upcomingShows: Show[] = [
   {
-    date: 'September 12th',
-    venue: 'GearHouse Brewing Co.',
-    location: 'Chambersburg, PA',
-    address: 'Chambersburg, PA',
-    time: '7-9:30 PM',
-    details: 'Free Show',
-    icon: <Music className="h-5 w-5" />
-  },
-  {
     date: 'October 3rd',
     venue: 'Sleepy Creek Fall Fest',
     location: 'Sleepy Creek, WV',
@@ -69,7 +60,7 @@ export default function UpcomingShows() {
             Upcoming Shows
           </h2>
           <p className="text-xl text-gray-600 max-w-2xl mx-auto">
-            Catch us live on stage. Join the energy, feel the music.
+            Catch us live!
           </p>
         </div>
 
