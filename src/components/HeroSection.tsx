@@ -129,33 +129,23 @@ export default function HeroSection() {
           </div>
 
           {/* Text Section */}
-          <div className="mb-12">
-            <div className="relative">
-              <div className={`transition-all duration-700 ease-in-out ${
-                showTrackInfo ? 'opacity-0 transform -translate-y-4' : 'opacity-100 transform translate-y-0'
-              }`}>
-                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                  Experience the raw energy and soulful melodies that define our sound. 
-                  Join us on a musical journey that speaks to the heart.
-                </p>
-              </div>
-              <div className={`absolute inset-0 transition-all duration-700 ease-in-out ${
-                showTrackInfo ? 'opacity-100 transform translate-y-0' : 'opacity-0 transform translate-y-4'
-              }`}>
-                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                  Preview of "Ghostride" from our debut album releasing on October 3, 2025!
-                </p>
-                {/* OLD DESCRIPTION - COMMENTED OUT
-                <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                  "Brownstones" from our 7/26/25 Greenbriar Brewing Co show on Sal Paradise's anniversary
-                </p>
-                */}
-              </div>
+          <div className={`transition-all duration-700 ease-in-out overflow-hidden ${
+            showTrackInfo ? 'opacity-100 max-h-96 mb-8' : 'opacity-0 max-h-0 mb-0'
+          }`}>
+            <div className="space-y-4">
+              <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
+                Preview of <span className="font-bold text-yellow-300">"Ghostride"</span> from our new e.p.
+              </p>
+              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
+                Streaming everywhere <span className="font-bold text-yellow-300">October 3</span>
+              </p>
             </div>
           </div>
 
           {/* Button Section */}
-          <div className="flex justify-center">
+          <div className={`flex justify-center transition-all duration-700 ease-in-out ${
+            showTrackInfo ? 'transform translate-y-0' : 'transform translate-y-0'
+          }`}>
             {/* TROPICAL VERSION */}
             <Button
               onClick={handleDropNeedle}
