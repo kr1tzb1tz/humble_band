@@ -134,10 +134,10 @@ export default function HeroSection() {
           }`}>
             <div className="space-y-4">
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                Preview of <span className="font-bold text-yellow-300">"Ghostride"</span> from our new e.p.
+                Preview of <span className="font-bold text-orange-500">"Ghostride"</span> from our new EP.
               </p>
               <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                Streaming everywhere <span className="font-bold text-yellow-300">October 3</span>
+                Streaming everywhere <span className="font-bold text-orange-500">October 3</span>
               </p>
             </div>
           </div>

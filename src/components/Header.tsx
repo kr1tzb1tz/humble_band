@@ -32,9 +32,9 @@ export default function Header() {
             <img
               src="/logo.png"
               alt="Humble Band Logo"
-              width={40}
-              height={40}
-              className="h-10 w-10 object-contain"
+              width={48}
+              height={48}
+              className="h-12 w-12 sm:h-10 sm:w-10 object-contain"
             />
           </div>
 
@@ -66,15 +66,21 @@ export default function Header() {
               variant="ghost"
               size="icon"
               onClick={toggleMenu}
-              className="text-white hover:text-orange-500 hover:bg-orange-500/10 transition-all duration-300 rounded-full"
+              className="text-white hover:text-orange-500 hover:bg-orange-500/10 transition-all duration-300 rounded-full w-16 h-16 p-2"
             >
-              <div className="relative w-6 h-6">
-                <Menu className={`absolute inset-0 h-6 w-6 transition-all duration-300 ${
-                  isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'
-                }`} />
-                <X className={`absolute inset-0 h-6 w-6 transition-all duration-300 ${
-                  isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
-                }`} />
+              <div className="relative w-full h-full flex items-center justify-center">
+                <Menu 
+                  className={`transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'
+                  }`} 
+                  style={{ width: '32px', height: '32px' }}
+                />
+                <X 
+                  className={`absolute transition-all duration-300 ${
+                    isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
+                  }`} 
+                  style={{ width: '32px', height: '32px' }}
+                />
               </div>
             </Button>
           </div>

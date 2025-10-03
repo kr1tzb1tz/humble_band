@@ -1,6 +1,7 @@
 'use client';
 
 import { Music, Instagram, Facebook } from 'lucide-react';
+import { SiSpotify, SiApplemusic } from "react-icons/si";
 
 export default function Footer() {
   const scrollToSection = (sectionId: string) => {
@@ -78,7 +79,7 @@ export default function Footer() {
                 href="https://www.facebook.com/profile.php?id=61566321046928"
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-orange-500 transition-colors"
+                className="text-gray-400 hover:text-[#1877F2] transition-colors flex items-center justify-center w-8 h-8"
                 aria-label="Follow us on Facebook"
               >
                 <Facebook className="h-6 w-6" />
@@ -87,10 +88,28 @@ export default function Footer() {
                 href="https://www.instagram.com/humble_band_?utm_source=ig_web_button_share_sheet&igsh=MXVhaXMxcHhocGQ5dQ=="
                 target="_blank"
                 rel="noopener noreferrer"
-                className="text-gray-400 hover:text-orange-500 transition-colors"
+                className="text-gray-400 hover:text-[#E4405F] transition-colors flex items-center justify-center w-8 h-8"
                 aria-label="Follow us on Instagram"
               >
                 <Instagram className="h-6 w-6" />
+              </a>
+              <a 
+                href="https://music.apple.com/us/artist/humble/1841926702"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#FC3C44] transition-colors flex items-center justify-center w-8 h-8"
+                aria-label="Follow us on Apple Music"
+              >
+                <SiApplemusic size={24} />
+              </a>
+              <a 
+                href="https://open.spotify.com/artist/6auPJqPy7ul5AIJX8JxdN1"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="text-gray-400 hover:text-[#1DB954] transition-colors flex items-center justify-center w-8 h-8"
+                aria-label="Follow us on Spotify"
+              >
+                <SiSpotify size={24} />
               </a>
             </div>
             <p className="text-sm text-gray-500 mt-4">

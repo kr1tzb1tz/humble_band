@@ -1,7 +1,7 @@
 "use client"
-import { Star } from 'lucide-react';
 import { useState } from 'react';
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
+import { SiSpotify, SiApplemusic } from "react-icons/si";
 
 export default function AlbumSection() {
   const [isHovered, setIsHovered] = useState(false);
@@ -91,14 +91,39 @@ export default function AlbumSection() {
                 {/* Description */}
                 <div className="space-y-6">
                   <div className="space-y-4">
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
-                      Our new e.p. - five songs recorded in two days, August 15-16, with 
+                    <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-xl font-light">
+                      Our first EP - five songs recorded in two days, August 15-16, with 
                       <span className="font-semibold text-orange-500"> Rick Witkowski of Crack the Sky</span> at the helm.
                     </p>
-                    <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
-                      It's a soulful collection of tunes that we hope you enjoy! The new e.p. is streaming on all platforms 
-                      <span className="font-bold text-orange-500">October 3</span>.
+                    <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-xl font-light">
+                      It's a soulful collection of tunes that we hope you enjoy! Streaming on all platforms  
+                      <span className="font-bold text-orange-500"> October 3</span>
                     </p>
+                  </div>
+                  
+                  {/* Streaming Links */}
+                  <div className="flex items-center justify-center lg:justify-start gap-6 pt-6">
+                    <a
+                      href="https://music.apple.com/us/artist/humble/1841926702"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#FC3C44] hover:bg-[#E63543] text-white px-4 py-3 rounded-full transition-all duration-200 hover:scale-105 flex items-center gap-3 shadow-lg"
+                      aria-label="Listen on Apple Music"
+                    >
+                      <SiApplemusic size={24} color="white" />
+                      <span className="font-medium">Apple Music</span>
+                    </a>
+
+                    <a
+                      href="https://open.spotify.com/artist/6auPJqPy7ul5AIJX8JxdN1"
+                      target="_blank"
+                      rel="noopener noreferrer"
+                      className="bg-[#1DB954] hover:bg-[#1AA34A] text-white px-4 py-3 rounded-full transition-all duration-200 hover:scale-105 flex items-center gap-3 shadow-lg"
+                      aria-label="Listen on Spotify"
+                    >
+                      <SiSpotify size={24} color="white" />
+                      <span className="font-medium">Spotify</span>
+                    </a>
                   </div>
                 </div>
               </div>
