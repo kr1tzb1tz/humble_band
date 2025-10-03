@@ -146,30 +146,13 @@ export default function HeroSection() {
           <div className={`flex justify-center transition-all duration-700 ease-in-out ${
             showTrackInfo ? 'transform translate-y-0' : 'transform translate-y-0'
           }`}>
-            {/* TROPICAL VERSION */}
             <Button
               onClick={handleDropNeedle}
-              className="bg-gradient-to-r from-green-500 via-emerald-500 to-teal-500 hover:from-green-600 hover:via-emerald-600 hover:to-teal-600 text-white py-4 px-8 rounded-full shadow-2xl transition-all duration-300 transform hover:scale-105 text-lg font-bold border-2 border-yellow-300/30 hover:border-yellow-300/50 relative overflow-hidden"
+              className="bg-gradient-to-r from-orange-500 to-[#346703] hover:from-orange-600 hover:to-[#2a5502] text-white py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
             >
-              {/* Tropical Background Pattern */}
-              <div className="absolute inset-0 bg-gradient-to-r from-yellow-400/20 via-transparent to-yellow-400/20 animate-pulse"></div>
-              <div className="relative flex items-center">
-                <Palmtree className="mr-3 h-6 w-6 text-yellow-300 animate-pulse" />
-                <span className="bg-gradient-to-r from-yellow-200 to-yellow-100 bg-clip-text text-transparent">
-                  {isAudioPlaying ? 'Stop the Vibes' : 'Drop the Needle'}
-                </span>
-              </div>
-            </Button>
-            
-            {/* OLD VERSION - COMMENTED OUT
-            <Button
-              onClick={handleDropNeedle}
-              className="bg-gradient-to-r from-orange-500 to-red-500 hover:from-orange-600 hover:to-red-600 text-white py-4 px-8 rounded-full shadow-lg transition-all duration-300 transform hover:scale-105 text-lg"
-            >
-              <Music2 className="mr-3 h-6 w-6" />
+              <Palmtree className="mr-3 h-6 w-6" />
               {isAudioPlaying ? 'Stop' : 'Drop the needle'}
             </Button>
-            */}
           </div>
         </div>
       </div>

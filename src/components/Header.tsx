@@ -27,8 +27,8 @@ export default function Header() {
     <header className="bg-black text-white shadow-lg sticky top-0 z-50">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
-          {/* Logo and Brand */}
-          <div className="flex items-center space-x-3">
+          {/* Logo */}
+          <div className="flex items-center">
             <img
               src="/logo.png"
               alt="Humble Band Logo"
@@ -36,9 +36,6 @@ export default function Header() {
               height={40}
               className="h-10 w-10 object-contain"
             />
-            <h1 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
-              humble band
-            </h1>
           </div>
 
           {/* Desktop Navigation */}

@@ -17,7 +17,7 @@ export default function AlbumSection() {
               },
               {
                 children: (
-                  <div className="absolute inset-0 bg-black/50"></div>
+                  <div className="absolute inset-0 bg-black/20"></div>
                 ),
                 speed: -10,
               },
@@ -37,7 +37,7 @@ export default function AlbumSection() {
                   onMouseLeave={() => setIsHovered(false)}
                 >
                   {/* Glow Effect */}
-                  <div className={`absolute -inset-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full blur-2xl transition-all duration-700 ${
+                  <div className={`absolute -inset-4 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-2xl transition-all duration-700 ${
                     isHovered ? 'opacity-60 scale-110' : 'opacity-30 scale-100'
                   }`}></div>
                   
@@ -58,13 +58,10 @@ export default function AlbumSection() {
                 {/* Title */}
                 <div className="space-y-4">
                   <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-tight drop-shadow-2xl">
-                    New
-                    <span className="block bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent">
-                      Release!
-                    </span>
+                    New Release!
                   </h1>
                   
-                  <div className="w-32 h-2 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full shadow-lg mx-auto lg:mx-0"></div>
+                  <div className="w-32 h-2 bg-gradient-to-r from-orange-500 to-[#346703] rounded-full shadow-lg mx-auto lg:mx-0"></div>
                 </div>
 
                 {/* Album Art - Mobile Only */}
@@ -75,7 +72,7 @@ export default function AlbumSection() {
                     onMouseLeave={() => setIsHovered(false)}
                   >
                     {/* Glow Effect */}
-                    <div className={`absolute -inset-4 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 rounded-full blur-2xl transition-all duration-700 ${
+                    <div className={`absolute -inset-4 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-2xl transition-all duration-700 ${
                       isHovered ? 'opacity-60 scale-110' : 'opacity-30 scale-100'
                     }`}></div>
                     
@@ -96,11 +93,11 @@ export default function AlbumSection() {
                   <div className="space-y-4">
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
                       Our new e.p. - five songs recorded in two days, August 15-16, with 
-                      <span className="font-semibold text-yellow-300"> Rick Witkowski of Crack the Sky</span> at the helm.
+                      <span className="font-semibold text-orange-500"> Rick Witkowski of Crack the Sky</span> at the helm.
                     </p>
                     <p className="text-lg sm:text-xl md:text-2xl lg:text-3xl text-white/95 leading-relaxed drop-shadow-xl font-light">
                       It's a soulful collection of tunes that we hope you enjoy! The new e.p. is streaming on all platforms 
-                      <span className="font-bold text-yellow-300"> October 3</span>.
+                      <span className="font-bold text-orange-500">October 3</span>.
                     </p>
                   </div>
                 </div>

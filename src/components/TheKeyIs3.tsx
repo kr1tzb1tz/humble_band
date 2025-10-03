@@ -6,32 +6,29 @@ export default function TheKeyIs3() {
   const photos = [
     {
       src: '/jase.jpg',
-      alt: 'Space Jase Mattis',
-      description: 'Space Jase Mattis getting ready for the Greenbriar Brewing Co. show while taking in some beautiful West Virginia love outside Lewisburg.',
+      alt: 'Jase',
       name: 'Jase'
     },
     {
       src: '/nuggy.jpg',
       alt: 'Nuggy',
-      description: 'Nuggy kicking out some jams at the recent Sleepy Creek show.',
       name: 'Nuggy'
     },
     {
       src: '/matty.jpg',
       alt: 'Matty',
-      description: 'Matty bringing the heat and soul to the stage at the recent Sleepy Creek show.',
       name: 'Matty'
     }
   ];
 
   return (
-    <section id="the-key-is-3" className="py-20 bg-gradient-to-br from-purple-900 via-indigo-900 to-purple-800 relative overflow-hidden">
-      {/* Groovy background pattern */}
-      <div className="absolute inset-0 opacity-10">
-        <div className="absolute top-10 left-10 w-20 h-20 bg-yellow-400 rounded-full animate-pulse"></div>
-        <div className="absolute top-32 right-20 w-16 h-16 bg-pink-400 rounded-full animate-pulse delay-1000"></div>
-        <div className="absolute bottom-20 left-1/4 w-12 h-12 bg-green-400 rounded-full animate-pulse delay-500"></div>
-        <div className="absolute bottom-32 right-1/3 w-24 h-24 bg-orange-400 rounded-full animate-pulse delay-1500"></div>
+    <section id="the-key-is-3" className="py-20 bg-gradient-to-br from-gray-900 via-gray-800 to-black relative overflow-hidden">
+      {/* Green accent pattern */}
+      <div className="absolute inset-0 opacity-6">
+        <div className="absolute top-10 left-10 w-16 h-16 bg-green-500 rounded-full animate-pulse"></div>
+        <div className="absolute top-32 right-20 w-12 h-12 bg-green-400 rounded-full animate-pulse delay-1000"></div>
+        <div className="absolute bottom-20 left-1/4 w-10 h-10 bg-green-600 rounded-full animate-pulse delay-500"></div>
+        <div className="absolute bottom-32 right-1/3 w-14 h-14 bg-green-500 rounded-full animate-pulse delay-1500"></div>
       </div>
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 relative z-10">
@@ -41,7 +38,7 @@ export default function TheKeyIs3() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold text-white mb-6 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500 bg-clip-text text-transparent">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-[#346703] bg-clip-text text-transparent mb-6">
             The Key is Three
           </h2>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">
@@ -59,7 +56,7 @@ export default function TheKeyIs3() {
               transition={{ duration: 0.8, delay: index * 0.2 }}
               className="group"
             >
-              <div className="relative overflow-hidden rounded-2xl bg-gradient-to-br from-purple-600 to-pink-600 p-1">
+              <div className="relative overflow-hidden rounded-2xl">
                 <div className="relative overflow-hidden rounded-xl">
                   <img
                     src={photo.src}
@@ -70,10 +67,7 @@ export default function TheKeyIs3() {
                 </div>
                 
                 <div className="absolute bottom-0 left-0 right-0 p-6 text-white">
-                  <h3 className="text-2xl font-bold mb-2 text-yellow-300">{photo.name}</h3>
-                  <p className="text-sm leading-relaxed opacity-90">
-                    {photo.description}
-                  </p>
+                  <h3 className="text-2xl font-bold text-white">{photo.name}</h3>
                 </div>
               </div>
             </motion.div>
@@ -88,29 +82,24 @@ export default function TheKeyIs3() {
           className="max-w-5xl mx-auto text-center"
         >
           <div className="relative bg-gradient-to-br from-white/15 via-white/10 to-white/5 backdrop-blur-sm rounded-3xl p-10 border border-white/30 shadow-2xl overflow-hidden">
-            {/* Decorative elements */}
-            <div className="absolute top-0 left-0 w-full h-1 bg-gradient-to-r from-yellow-400 via-orange-500 to-pink-500"></div>
-            <div className="absolute -top-4 -right-4 w-24 h-24 bg-yellow-400/20 rounded-full blur-xl"></div>
-            <div className="absolute -bottom-4 -left-4 w-32 h-32 bg-pink-400/20 rounded-full blur-xl"></div>
-            
-            {/* Bio header */}
+              {/* Bio header */}
             <div className="relative z-10 mb-8">
-              <h3 className="text-3xl font-bold text-yellow-300 mb-3">Our Story</h3>
-              <div className="w-20 h-1 bg-gradient-to-r from-yellow-400 to-orange-500 mx-auto rounded-full"></div>
+              <h3 className="text-3xl font-bold text-white mb-3">Our Story</h3>
+              <div className="w-20 h-1 bg-gradient-to-r from-orange-500 to-orange-500 mx-auto rounded-full"></div>
             </div>
             
             {/* Bio content with enhanced typography */}
             <div className="relative z-10 space-y-6">
               <p className="text-lg text-gray-200 leading-relaxed">
-                <span className="text-yellow-300 font-semibold">The humble band</span> – drummer <span className="text-orange-300 font-medium">Brian Gorby</span>, bassist <span className="text-orange-300 font-medium">Jason Mattis</span> and guitarist <span className="text-orange-300 font-medium">Matt Heusel</span> – are kindred spirits who share a love of good roots music and songs. The three met in West Virginia as part of a rhythm section in <span className="text-pink-300 font-medium">Humble Sacrifice</span>, which made an album for Richmond's Planetary Records.
+                The humble band – drummer Brian Gorby, bassist Jason Mattis and guitarist Matt Heusel – are kindred spirits who share a love of good roots music and songs. The three met in West Virginia as part of a rhythm section in Humble Sacrifice, which made an album for Richmond's Planetary Records.
               </p>
               
               <p className="text-lg text-gray-200 leading-relaxed">
-                Later, Gorby and Heusel helped form the <span className="text-yellow-300 font-medium">Trainjumpers</span> and Gorby continued to broaden his musical palette with the <span className="text-yellow-300 font-medium">Hackensaw Boys</span> before finding a home as soulful percussionist with Pennsylvania's bluegrass-based <span className="text-orange-300 font-medium">Cabinet</span>. Meanwhile, Mattis had been a mainstay in Washington, D.C. legend <span className="text-pink-300 font-medium">Evan Bliss'</span> band.
+                Later, Gorby and Heusel helped form the Trainjumpers and Gorby continued to broaden his musical palette with the Hackensaw Boys before finding a home as soulful percussionist with Pennsylvania's bluegrass-based Cabinet. Meanwhile, Mattis had been a mainstay in Washington, D.C. legend Evan Bliss' band.
               </p>
               
               <p className="text-lg text-gray-200 leading-relaxed">
-                The three friends had always hoped to do more work together, though. Now they can in <span className="text-yellow-300 font-semibold">humble</span>, which harkens to its member's interests in things like old <span className="text-orange-300 font-medium">Grant Green</span>, the <span className="text-orange-300 font-medium">Meters</span>, <span className="text-pink-300 font-medium">JB's</span>, roots reggae. The group hopes to create music that'll be an uplift for people, and that'll bear repeated listenings. <span className="text-yellow-300 font-semibold italic">"It's got to be inspired to be any good, don't it!?"</span>
+                The three friends had always hoped to do more work together, though. Now they can in humble, which harkens to its member's interests in things like old Grant Green, the Meters, JB's, roots reggae. The group hopes to create music that'll be an uplift for people, and that'll bear repeated listenings. "It's got to be inspired to be any good, don't it!?"
               </p>
             </div>
             

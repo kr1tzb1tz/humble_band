@@ -1,5 +1,34 @@
 @import "tailwindcss";
 
+/* Custom orange color */
+.text-custom-orange {
+  color: #FA9936;
+}
+
+.bg-custom-orange {
+  background-color: #FA9936;
+}
+
+.from-custom-orange {
+  --tw-gradient-from: #FA9936 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(250 153 54 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.to-custom-orange {
+  --tw-gradient-to: #FA9936 var(--tw-gradient-to-position);
+}
+
+.hover\\:from-custom-orange:hover {
+  --tw-gradient-from: #FA9936 var(--tw-gradient-from-position);
+  --tw-gradient-to: rgb(250 153 54 / 0) var(--tw-gradient-to-position);
+  --tw-gradient-stops: var(--tw-gradient-from), var(--tw-gradient-to);
+}
+
+.hover\\:to-custom-orange:hover {
+  --tw-gradient-to: #FA9936 var(--tw-gradient-to-position);
+}
+
 :root {
   --background: 0 0% 100%;
   --foreground: 222.2 84% 4.9%;

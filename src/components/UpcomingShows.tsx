@@ -100,7 +100,7 @@ export default function UpcomingShows() {
                 
                 {show.additionalInfo && (
                   <div className="pt-2 border-t border-gray-200">
-                    <p className="text-sm text-purple-500 italic">{show.additionalInfo}</p>
+                    <p className="text-sm text-[#346703] italic">{show.additionalInfo}</p>
                   </div>
                 )}
               </CardContent>

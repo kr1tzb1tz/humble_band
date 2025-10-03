@@ -30,13 +30,12 @@ export default function Footer() {
                 height={32}
                 className="h-8 w-8 object-contain"
               />
-              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-red-500 bg-clip-text text-transparent">
+              <h3 className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-[#346703] bg-clip-text text-transparent">
                 humble band
               </h3>
             </button>
             <p className="text-gray-400 max-w-sm">
-              Experience the raw energy and soulful melodies that define our sound. 
-              Join us on a musical journey that speaks to the heart.
+              Funky Roots Music
             </p>
           </div>
 
