@@ -14,16 +14,6 @@ interface Show {
 
 const upcomingShows: Show[] = [
   {
-    date: 'October 3rd',
-    venue: 'Sleepy Creek Fall Fest',
-    location: 'Sleepy Creek, WV',
-    address: 'Sleepy Creek, WV',
-    time: '7:30-9 PM showtime',
-    details: 'With the Ferd Band and Dirty Grass Players',
-    additionalInfo: 'Our funky drummer Nugget will be the artist at large for the weekend, sitting in with different acts!',
-    icon: <Music className="h-5 w-5" />
-  },
-  {
     date: 'November 14th',
     venue: 'Relax Lounge @ the Orchards',
     location: 'Chambersburg, PA',
