@@ -38,7 +38,7 @@ export default function TheKeyIs3() {
           transition={{ duration: 0.8 }}
           className="text-center mb-16"
         >
-          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-[#346703] bg-clip-text text-transparent mb-6">
+          <h2 className="text-5xl md:text-6xl font-bold bg-gradient-to-r from-orange-500 to-[#346703] bg-clip-text text-transparent mb-6 leading-tight pb-2">
             The Key is Three
           </h2>
           <p className="text-xl text-gray-200 max-w-2xl mx-auto leading-relaxed">

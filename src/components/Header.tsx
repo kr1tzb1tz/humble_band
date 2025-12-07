@@ -28,7 +28,10 @@ export default function Header() {
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center py-4">
           {/* Logo */}
-          <div className="flex items-center">
+          <button 
+            onClick={() => scrollToSection('hero')} 
+            className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
+          >
             <img
               src="/logo.png"
               alt="Humble Band Logo"
@@ -36,15 +39,21 @@ export default function Header() {
               height={48}
               className="h-12 w-12 sm:h-10 sm:w-10 object-contain"
             />
-          </div>
+          </button>
 
           {/* Desktop Navigation */}
           <nav className="hidden md:flex space-x-8">
             <button 
-              onClick={() => scrollToSection('home')} 
+              onClick={() => scrollToSection('hero')} 
               className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
             >
               Home
+            </button>
+            <button 
+              onClick={() => scrollToSection('sample')} 
+              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
+            >
+              Sample
             </button>
             <button 
               onClick={() => scrollToSection('upcoming-shows')} 
@@ -92,7 +101,7 @@ export default function Header() {
         }`}>
           <nav className="pb-4 space-y-1">
             <button
-              onClick={() => scrollToSection('home')}
+              onClick={() => scrollToSection('hero')}
               className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
                 isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
               }`}
@@ -101,11 +110,20 @@ export default function Header() {
               Home
             </button>
             <button
-              onClick={() => scrollToSection('upcoming-shows')}
+              onClick={() => scrollToSection('sample')}
               className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
                 isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
               }`}
               style={{ transitionDelay: isMenuOpen ? '0.2s' : '0s' }}
+            >
+              Sample
+            </button>
+            <button
+              onClick={() => scrollToSection('upcoming-shows')}
+              className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
+                isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
+              }`}
+              style={{ transitionDelay: isMenuOpen ? '0.3s' : '0s' }}
             >
               Upcoming Shows
             </button>
@@ -114,7 +132,7 @@ export default function Header() {
               className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
                 isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
               }`}
-              style={{ transitionDelay: isMenuOpen ? '0.3s' : '0s' }}
+              style={{ transitionDelay: isMenuOpen ? '0.4s' : '0s' }}
             >
               Meet the Band
             </button>

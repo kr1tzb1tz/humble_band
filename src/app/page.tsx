@@ -1,6 +1,6 @@
 import Header from '@/components/Header'
+import SampleSection from '@/components/SampleSection'
 import HeroSection from '@/components/HeroSection'
-import AlbumSection from '@/components/AlbumSection'
 import UpcomingShows from '@/components/UpcomingShows'
 import TheKeyIs3 from '@/components/TheKeyIs3'
 import MerchSection from '@/components/MerchSection'
@@ -11,8 +11,8 @@ export default function Home() {
   return (
     <div className="min-h-screen">
       <Header />
-      <AlbumSection />
       <HeroSection />
+      <SampleSection />
       <UpcomingShows />
       <TheKeyIs3 />
       {/* <MerchSection /> */}

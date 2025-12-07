@@ -21,7 +21,7 @@ export default function Footer() {
           {/* Brand */}
           <div className="space-y-4">
             <button 
-              onClick={() => scrollToSection('home')} 
+              onClick={() => scrollToSection('hero')} 
               className="flex items-center space-x-3 hover:opacity-80 transition-opacity cursor-pointer"
             >
               <img
@@ -46,10 +46,18 @@ export default function Footer() {
             <ul className="space-y-2">
               <li>
                 <button 
-                  onClick={() => scrollToSection('home')} 
+                  onClick={() => scrollToSection('hero')} 
                   className="text-gray-400 hover:text-white transition-colors cursor-pointer text-left"
                 >
                   Home
+                </button>
+              </li>
+              <li>
+                <button 
+                  onClick={() => scrollToSection('sample')} 
+                  className="text-gray-400 hover:text-white transition-colors cursor-pointer text-left"
+                >
+                  Sample
                 </button>
               </li>
               <li>
