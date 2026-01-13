@@ -5,17 +5,17 @@ import { motion } from 'framer-motion';
 export default function TheKeyIs3() {
   const photos = [
     {
-      src: '/jase.jpg',
+      src: '/img/jase.webp',
       alt: 'Jase',
       name: 'Jase'
     },
     {
-      src: '/nuggy.jpg',
+      src: '/img/nuggy.webp',
       alt: 'Nuggy',
       name: 'Nuggy'
     },
     {
-      src: '/matty.jpg',
+      src: '/img/matty.webp',
       alt: 'Matty',
       name: 'Matty'
     }

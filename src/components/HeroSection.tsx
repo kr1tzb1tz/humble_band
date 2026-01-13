@@ -12,7 +12,7 @@ export default function HeroSection() {
           <ParallaxBanner
             layers={[
               {
-                image: '/beach.jpg',
+                image: '/img/beach.webp',
                 speed: -40,
               },
               {
@@ -44,7 +44,7 @@ export default function HeroSection() {
                   {/* Album Art */}
                   <div className="relative">
                       <img
-                        src="/album-1.jpg"
+                        src="/img/album-1.webp"
                         alt="Humble Band Album"
                         className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-3xl shadow-2xl transform group-hover/album:scale-105 transition-all duration-500"
                       />
@@ -79,7 +79,7 @@ export default function HeroSection() {
                     {/* Album Art */}
                     <div className="relative">
                       <img
-                        src="/album-1.jpg"
+                        src="/img/album-1.webp"
                         alt="Humble Band Album"
                         className="w-80 h-80 sm:w-96 sm:h-96 rounded-3xl shadow-2xl transform group-hover/album:scale-105 transition-all duration-500"
                       />

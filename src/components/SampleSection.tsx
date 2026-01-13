@@ -67,7 +67,7 @@ export default function SampleSection() {
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
-          src="/the-band.jpg"
+          src="/img/the-band.webp"
           alt="Humble Band"
           className="w-full h-full object-cover hero-bg-image"
         />
@@ -108,7 +108,7 @@ export default function SampleSection() {
                 isPlaying ? 'animate-spin-continuous' : ''
               }`}>
                 <img
-                  src="/colored-logo.png"
+                  src="/img/colored-logo.webp"
                   alt="Humble Band Logo"
                   className="h-full w-full object-contain p-2"
                 />
@@ -165,7 +165,7 @@ export default function SampleSection() {
         preload="metadata"
         controls={false}
       >
-        <source src="/Ghostride_mix_2_L_MASTERED.wav" type="audio/wav" />
+        <source src="/Ghostride_mix_2_L_MASTERED.mp3" type="audio/mpeg" />
         {/* OLD AUDIO SOURCE - COMMENTED OUT
         <source src="/BrownstonesLive.m4a" type="audio/mp4" />
         */}

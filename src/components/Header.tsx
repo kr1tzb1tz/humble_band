@@ -33,7 +33,7 @@ export default function Header() {
             className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
           >
             <img
-              src="/logo.png"
+              src="/img/logo.webp"
               alt="Humble Band Logo"
               width={48}
               height={48}
