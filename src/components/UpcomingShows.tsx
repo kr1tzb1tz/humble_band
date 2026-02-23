@@ -31,6 +31,15 @@ export default function UpcomingShows() {
           <div className="w-24 h-1 bg-gradient-to-r from-[#346703] to-orange-500 rounded-full mx-auto mt-4" />
         </div>
 
+        {/* Band Photo */}
+        <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
+          <img
+            src="/img/the-band.webp"
+            alt="Humble Band"
+            className="w-full aspect-[16/9] object-cover object-center"
+          />
+        </div>
+
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {shows.map((show) => (

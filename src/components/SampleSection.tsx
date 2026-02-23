@@ -64,18 +64,8 @@ export default function SampleSection() {
 
   return (
     <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black border-y border-white/20">
-      {/* Background Image */}
-      <div className="absolute inset-0 z-0">
-        <img
-          src="/img/the-band.webp"
-          alt="Humble Band"
-          className="block w-full h-full object-cover hero-bg-image"
-        />
-        {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/25"></div>
-        {/* Additional gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/25 to-orange-900/30"></div>
-      </div>
+      {/* Background gradient */}
+      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-950 via-black to-orange-950/20"></div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-2000">
