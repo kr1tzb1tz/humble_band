@@ -63,18 +63,18 @@ export default function SampleSection() {
   }, []);
 
   return (
-    <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden">
+    <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black border-y border-white/20">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <img
           src="/img/the-band.webp"
           alt="Humble Band"
-          className="w-full h-full object-cover hero-bg-image"
+          className="block w-full h-full object-cover hero-bg-image"
         />
         {/* Overlay for better text readability */}
-        <div className="absolute inset-0 bg-black/55"></div>
+        <div className="absolute inset-0 bg-black/25"></div>
         {/* Additional gradient overlay */}
-        <div className="absolute inset-0 bg-gradient-to-br from-black/70 via-black/55 to-orange-900/30"></div>
+        <div className="absolute inset-0 bg-gradient-to-br from-black/30 via-black/25 to-orange-900/30"></div>
       </div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
@@ -135,9 +135,6 @@ export default function SampleSection() {
             <div className="space-y-4">
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
                 Preview of <span className="font-bold text-orange-500">"Ghostride"</span> from our new EP.
-              </p>
-              <p className="text-lg md:text-xl lg:text-2xl text-gray-300 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                Streaming everywhere <span className="font-bold text-orange-500">October 3</span>
               </p>
             </div>
           </div>
