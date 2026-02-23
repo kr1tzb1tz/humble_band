@@ -9,7 +9,7 @@
  *
  * Examples:
  *     node convert_images.js snapshot/
- *     node convert_images.js snapshot/ --output ui/public/img
+ *     node convert_images.js snapshot/ --output public/img
  *     node convert_images.js /path/to/images -o /path/to/output
  */
 
@@ -49,7 +49,7 @@ function copySvg(inputPath, outputPath) {
 function parseArgs(args) {
   const result = {
     inputDir: null,
-    output: 'ui/public/img',
+    output: 'public/img',
     quality: 85,
   };
 
@@ -67,13 +67,13 @@ Usage: node convert_images.js <input_dir> [options]
 Convert JPG/PNG images to WebP format
 
 Options:
-  -o, --output <dir>   Output directory (default: ui/public/img)
+  -o, --output <dir>   Output directory (default: public/img)
   -q, --quality <num>  WebP quality 1-100 (default: 85)
   -h, --help           Show this help message
 
 Examples:
   node convert_images.js snapshot/
-  node convert_images.js snapshot/ --output ui/public/img
+  node convert_images.js snapshot/ --output public/img
   node convert_images.js /path/to/images -o /path/to/output
 `);
       process.exit(0);
