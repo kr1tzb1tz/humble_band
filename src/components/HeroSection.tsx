@@ -1,134 +1,102 @@
 "use client"
-import { useState } from 'react';
 import { ParallaxProvider, ParallaxBanner } from 'react-scroll-parallax';
 import { SiSpotify, SiApplemusic } from "react-icons/si";
 
 export default function HeroSection() {
-  const [isHovered, setIsHovered] = useState(false);
-
   return (
     <ParallaxProvider>
-        <section id="hero" className="relative min-h-screen overflow-hidden">
-          <ParallaxBanner
-            layers={[
-              {
-                image: '/img/beach.webp',
-                speed: -40,
-              },
-              {
-                children: (
-                  <div className="absolute inset-0 bg-black/20"></div>
-                ),
-                speed: -10,
-              },
-            ]}
-            className="min-h-screen"
-          >
-            {/* Content Container - Perfectly Centered */}
-            <div className="relative z-20 min-h-screen w-full flex items-center justify-center px-4 sm:px-6 lg:px-8 py-16 sm:py-20 lg:py-0">
-            <div className="w-full max-w-7xl">
-              <div className="grid grid-cols-1 lg:grid-cols-2 gap-8 lg:gap-16 items-center">
-              
-              {/* Left Side - Album Art - Desktop Only */}
-              <div className="hidden lg:flex justify-center lg:justify-start order-2 lg:order-1">
-                <div 
-                  className="relative group/album"
-                  onMouseEnter={() => setIsHovered(true)}
-                  onMouseLeave={() => setIsHovered(false)}
-                >
-                  {/* Glow Effect */}
-                  <div className={`absolute -inset-4 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-2xl transition-all duration-700 ${
-                    isHovered ? 'opacity-60 scale-110' : 'opacity-30 scale-100'
-                  }`}></div>
-                  
-                  {/* Album Art */}
-                  <div className="relative">
-                      <img
-                        src="/img/album-1.webp"
-                        alt="Humble Band Album"
-                        className="w-80 h-80 sm:w-96 sm:h-96 lg:w-[28rem] lg:h-[28rem] xl:w-[32rem] xl:h-[32rem] rounded-3xl shadow-2xl transform group-hover/album:scale-105 transition-all duration-500"
-                      />
-                    
-                  </div>
-                </div>
-              </div>
+      <section id="hero" className="relative min-h-screen overflow-hidden">
+        <ParallaxBanner
+          layers={[
+            { image: '/img/beach.webp', speed: -40 },
+            {
+              children: <div className="absolute inset-0 bg-black/50" />,
+              speed: -10,
+            },
+          ]}
+          className="min-h-screen"
+        >
+          <div className="relative z-20 min-h-screen w-full flex items-center justify-center px-6 sm:px-8 lg:px-8">
+            <div className="w-full max-w-6xl">
+              <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-20 items-center">
 
-              {/* Right Side - Content */}
-              <div className="text-center lg:text-left order-1 lg:order-2 space-y-6 lg:space-y-8">
-                {/* Title */}
-                <div className="space-y-4">
-                  <h1 className="text-5xl sm:text-6xl md:text-7xl lg:text-8xl xl:text-9xl font-black text-white leading-tight drop-shadow-2xl">
-                    New Release!
-                  </h1>
-                  
-                  <div className="w-32 h-2 bg-gradient-to-r from-orange-500 to-[#346703] rounded-full shadow-lg mx-auto lg:mx-0"></div>
+                {/* Album Art — desktop only */}
+                <div className="hidden lg:flex justify-center order-2 lg:order-1">
+                  <img
+                    src="/img/album-1.webp"
+                    alt="Humble Band EP"
+                    className="w-[26rem] h-[26rem] xl:w-[30rem] xl:h-[30rem] rounded-2xl shadow-2xl border border-white/10"
+                  />
                 </div>
 
-                {/* Album Art - Mobile Only */}
-                <div className="flex justify-center lg:hidden">
-                  <div 
-                    className="relative group/album"
-                    onMouseEnter={() => setIsHovered(true)}
-                    onMouseLeave={() => setIsHovered(false)}
-                  >
-                    {/* Glow Effect */}
-                    <div className={`absolute -inset-4 bg-gradient-to-r from-orange-400 via-orange-500 to-orange-600 rounded-full blur-2xl transition-all duration-700 ${
-                      isHovered ? 'opacity-60 scale-110' : 'opacity-30 scale-100'
-                    }`}></div>
-                    
-                    {/* Album Art */}
-                    <div className="relative">
-                      <img
-                        src="/img/album-1.webp"
-                        alt="Humble Band Album"
-                        className="w-80 h-80 sm:w-96 sm:h-96 rounded-3xl shadow-2xl transform group-hover/album:scale-105 transition-all duration-500"
-                      />
-                      
-                    </div>
-                  </div>
-                </div>
+                {/* Content */}
+                <div className="text-center lg:text-left order-1 lg:order-2 space-y-7">
 
-                {/* Description */}
-                <div className="space-y-6">
-                  <div className="space-y-4">
-                    <p className="text-xl sm:text-2xl md:text-2xl lg:text-2xl text-white/95 leading-relaxed drop-shadow-xl font-light">
-                      Our first EP - five songs recorded in two days, August 15-16, with 
-                      <span className="font-semibold text-orange-500"> Rick Witkowski of Crack the Sky</span> at the helm. It's a soulful collection of tunes we hope you enjoy! 
+                  {/* Eyebrow — mobile: small thumbnail + label inline */}
+                  <div className="flex items-center justify-center lg:hidden gap-3">
+                    <img
+                      src="/img/album-1.webp"
+                      alt="Humble Band EP"
+                      className="w-20 h-20 rounded-lg shadow-lg border border-white/10 flex-shrink-0"
+                    />
+                    <p className="text-xs font-bold tracking-[0.3em] uppercase text-orange-400 text-left">
+                      New EP<br />Out Now
                     </p>
                   </div>
-                  
+
+                  {/* Eyebrow — desktop only */}
+                  <p className="hidden lg:block text-xs font-bold tracking-[0.3em] uppercase text-orange-400">
+                    New EP Out Now
+                  </p>
+
+                  {/* Band Name */}
+                  <div>
+                    <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black text-white leading-none tracking-tight">
+                      humble
+                    </h1>
+                    <h1 className="text-7xl sm:text-8xl lg:text-9xl font-black bg-gradient-to-r from-orange-400 to-[#4a8a05] bg-clip-text text-transparent leading-none tracking-tight">
+                      band
+                    </h1>
+                    <div className="w-16 h-px bg-gradient-to-r from-orange-500 to-[#346703] mt-5 mx-auto lg:mx-0" />
+                  </div>
+
+                  {/* Description */}
+                  <p className="text-base sm:text-lg text-white/75 leading-relaxed max-w-xs mx-auto lg:mx-0">
+                    Five songs recorded in two days with{' '}
+                    <span className="text-orange-400 font-medium">Rick Witkowski of Crack the Sky</span>.
+                    A soulful collection of Funky Roots Music.
+                  </p>
+
                   {/* Streaming Links */}
-                  <div className="flex items-center justify-center lg:justify-start gap-6 pt-6">
+                  <div className="flex items-center justify-center lg:justify-start gap-3 pt-1">
                     <a
                       href="https://music.apple.com/us/artist/humble/1841926702"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#FC3C44] hover:bg-[#E63543] text-white px-4 py-3 rounded-full transition-all duration-200 hover:scale-105 flex items-center gap-3 shadow-lg"
                       aria-label="Listen on Apple Music"
+                      className="flex items-center gap-2.5 bg-white/10 hover:bg-[#FC3C44] border border-white/20 hover:border-[#FC3C44] text-white px-5 py-2.5 rounded-full transition-all duration-500 backdrop-blur-sm text-sm font-medium"
                     >
-                      <SiApplemusic size={24} color="white" />
-                      <span className="font-medium">Apple Music</span>
+                      <SiApplemusic size={17} />
+                      Apple Music
                     </a>
-
                     <a
                       href="https://open.spotify.com/artist/6auPJqPy7ul5AIJX8JxdN1"
                       target="_blank"
                       rel="noopener noreferrer"
-                      className="bg-[#1DB954] hover:bg-[#1AA34A] text-white px-4 py-3 rounded-full transition-all duration-200 hover:scale-105 flex items-center gap-3 shadow-lg"
                       aria-label="Listen on Spotify"
+                      className="flex items-center gap-2.5 bg-white/10 hover:bg-[#1DB954] border border-white/20 hover:border-[#1DB954] text-white px-5 py-2.5 rounded-full transition-all duration-500 backdrop-blur-sm text-sm font-medium"
                     >
-                      <SiSpotify size={24} color="white" />
-                      <span className="font-medium">Spotify</span>
+                      <SiSpotify size={17} />
+                      Spotify
                     </a>
                   </div>
                 </div>
+
               </div>
             </div>
           </div>
-        </div>
         </ParallaxBanner>
       </section>
     </ParallaxProvider>
   );
 }
-

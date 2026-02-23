@@ -1,143 +1,99 @@
 'use client';
 
-import { Button } from '@/components/ui/button';
 import { Menu, X } from 'lucide-react';
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
+
+const navLinks = [
+  { label: 'Home', section: 'hero' },
+  { label: 'Listen', section: 'sample' },
+  { label: 'Upcoming Shows', section: 'upcoming-shows' },
+];
 
 export default function Header() {
   const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const [scrolled, setScrolled] = useState(false);
 
-  const toggleMenu = () => setIsMenuOpen(!isMenuOpen);
+  useEffect(() => {
+    const onScroll = () => setScrolled(window.scrollY > 20);
+    window.addEventListener('scroll', onScroll, { passive: true });
+    return () => window.removeEventListener('scroll', onScroll);
+  }, []);
 
   const scrollToSection = (sectionId: string) => {
-    const element = document.getElementById(sectionId);
-    if (element) {
-      element.scrollIntoView({
-        behavior: 'smooth',
-        block: 'start',
-      });
-    }
-    // Close mobile menu if open
-    if (isMenuOpen) {
-      setIsMenuOpen(false);
-    }
+    document.getElementById(sectionId)?.scrollIntoView({ behavior: 'smooth', block: 'start' });
+    setIsMenuOpen(false);
   };
 
   return (
-    <header className="bg-black text-white shadow-lg sticky top-0 z-50">
+    <header
+      className={`fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300 ${
+        scrolled
+          ? 'bg-black/90 backdrop-blur-md border-b border-white/5'
+          : 'bg-transparent'
+      }`}
+    >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
-        <div className="flex justify-between items-center py-4">
-          {/* Logo */}
-          <button 
-            onClick={() => scrollToSection('hero')} 
-            className="flex items-center hover:opacity-80 transition-opacity cursor-pointer"
+        <div className="flex justify-between items-center h-16">
+
+          {/* Logo + Brand */}
+          <button
+            onClick={() => scrollToSection('hero')}
+            className="flex items-center gap-2.5 hover:opacity-80 transition-opacity cursor-pointer"
           >
             <img
               src="/img/logo.webp"
               alt="Humble Band Logo"
-              width={48}
-              height={48}
-              className="h-12 w-12 sm:h-10 sm:w-10 object-contain"
+              width={32}
+              height={32}
+              className="h-8 w-8 object-contain"
             />
+            <span className="text-lg font-bold bg-gradient-to-r from-orange-400 to-[#4a8a05] bg-clip-text text-transparent">
+              humble band
+            </span>
           </button>
 
-          {/* Desktop Navigation */}
-          <nav className="hidden md:flex space-x-8">
-            <button 
-              onClick={() => scrollToSection('hero')} 
-              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
-            >
-              Home
-            </button>
-            <button 
-              onClick={() => scrollToSection('sample')} 
-              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
-            >
-              Sample
-            </button>
-            <button 
-              onClick={() => scrollToSection('upcoming-shows')} 
-              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
-            >
-              Upcoming Shows
-            </button>
-            <button 
-              onClick={() => scrollToSection('the-key-is-3')} 
-              className="hover:text-orange-500 transition-colors duration-200 cursor-pointer"
-            >
-              Meet the Band
-            </button>
+          {/* Desktop Nav */}
+          <nav className="hidden md:flex items-center gap-8">
+            {navLinks.map((link) => (
+              <button
+                key={link.section}
+                onClick={() => scrollToSection(link.section)}
+                className="text-sm text-white/75 hover:text-white transition-colors duration-200 cursor-pointer tracking-wide"
+              >
+                {link.label}
+              </button>
+            ))}
           </nav>
 
-          {/* Mobile Menu Button */}
-          <div className="md:hidden">
-            <Button
-              variant="ghost"
-              size="icon"
-              onClick={toggleMenu}
-              className="text-white hover:text-orange-500 hover:bg-orange-500/10 transition-all duration-300 rounded-full w-16 h-16 p-2"
-            >
-              <div className="relative w-full h-full flex items-center justify-center">
-                <Menu 
-                  className={`transition-all duration-300 ${
-                    isMenuOpen ? 'opacity-0 rotate-180' : 'opacity-100 rotate-0'
-                  }`} 
-                  style={{ width: '32px', height: '32px' }}
-                />
-                <X 
-                  className={`absolute transition-all duration-300 ${
-                    isMenuOpen ? 'opacity-100 rotate-0' : 'opacity-0 -rotate-180'
-                  }`} 
-                  style={{ width: '32px', height: '32px' }}
-                />
-              </div>
-            </Button>
-          </div>
-        </div>
+          {/* Mobile Toggle */}
+          <button
+            onClick={() => setIsMenuOpen(!isMenuOpen)}
+            className="md:hidden text-white/80 hover:text-white transition-colors p-1"
+            aria-label="Toggle menu"
+          >
+            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+          </button>
 
-        {/* Mobile Navigation */}
-        <div className={`md:hidden overflow-hidden transition-all duration-500 ease-in-out ${
-          isMenuOpen ? 'max-h-96 opacity-100' : 'max-h-0 opacity-0'
-        }`}>
-          <nav className="pb-4 space-y-1">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
-                isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isMenuOpen ? '0.1s' : '0s' }}
-            >
-              Home
-            </button>
-            <button
-              onClick={() => scrollToSection('sample')}
-              className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
-                isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isMenuOpen ? '0.2s' : '0s' }}
-            >
-              Sample
-            </button>
-            <button
-              onClick={() => scrollToSection('upcoming-shows')}
-              className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
-                isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isMenuOpen ? '0.3s' : '0s' }}
-            >
-              Upcoming Shows
-            </button>
-            <button
-              onClick={() => scrollToSection('the-key-is-3')}
-              className={`block w-full text-left py-3 px-4 rounded-lg hover:bg-orange-500/10 hover:text-orange-500 transition-all duration-300 cursor-pointer transform ${
-                isMenuOpen ? 'translate-x-0 opacity-100' : 'translate-x-4 opacity-0'
-              }`}
-              style={{ transitionDelay: isMenuOpen ? '0.4s' : '0s' }}
-            >
-              Meet the Band
-            </button>
-          </nav>
         </div>
+      </div>
+
+      {/* Mobile Menu */}
+      <div
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-md border-t border-b border-white/20 ${
+          isMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
+        }`}
+      >
+        <nav className="container mx-auto px-4 sm:px-6 py-3 flex flex-col gap-1">
+          {navLinks.map((link) => (
+            <button
+              key={link.section}
+              onClick={() => scrollToSection(link.section)}
+              className="text-left py-2.5 px-3 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer"
+            >
+              {link.label}
+            </button>
+          ))}
+        </nav>
       </div>
     </header>
   );
