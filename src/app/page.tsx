@@ -2,9 +2,9 @@ import Header from '@/components/Header'
 import SampleSection from '@/components/SampleSection'
 import HeroSection from '@/components/HeroSection'
 import UpcomingShows from '@/components/UpcomingShows'
-import TheKeyIs3 from '@/components/TheKeyIs3'
-import MerchSection from '@/components/MerchSection'
-import Newsletter from '@/components/Newsletter'
+//import TheKeyIs3 from '@/components/TheKeyIs3'
+//import MerchSection from '@/components/MerchSection'
+//import Newsletter from '@/components/Newsletter'
 import Footer from '@/components/Footer'
 
 export default function Home() {
@@ -14,7 +14,7 @@ export default function Home() {
       <HeroSection />
       <SampleSection />
       <UpcomingShows />
-      <TheKeyIs3 />
+      {/* <TheKeyIs3 /> */}
       {/* <MerchSection /> */}
       {/* <Newsletter /> */}
       <Footer />

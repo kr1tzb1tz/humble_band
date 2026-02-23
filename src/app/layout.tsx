@@ -45,7 +45,7 @@ export default function RootLayout({
         {/* Theme Color for Mobile */}
         <meta name="theme-color" content="#000000" />
       </head>
-      <body className="font-inter">
+      <body className="font-inter bg-black">
         <Providers>
           {children}
         </Providers>
