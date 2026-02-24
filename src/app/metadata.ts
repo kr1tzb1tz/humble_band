@@ -2,11 +2,11 @@ import type { Metadata } from "next";
 
 export const metadata: Metadata = {
   title: {
-    default: "Humble Band - Raw Energy & Soulful Melodies",
+    default: "Humble Band",
     template: "%s | Humble Band"
   },
-  description: "Experience the raw energy and soulful melodies that define our sound. Join us on a musical journey that speaks to the heart.",
-  keywords: ["humble band", "band", "live music", "rock band", "wheeling", "west virginia", "live shows", "music"],
+  description: "Funky Roots Music from Wheeling, WV / Charlottesville, VA.",
+  keywords: ["humble band", "band", "live music", "wheeling", "west virginia", "live shows", "music"],
   authors: [{ name: "Humble Band" }],
   creator: "Humble Band",
   publisher: "Humble Band",
@@ -23,8 +23,8 @@ export const metadata: Metadata = {
     type: 'website',
     locale: 'en_US',
     url: 'https://humble.band',
-    title: 'Humble Band - Raw Energy & Soulful Melodies',
-    description: 'Experience the raw energy and soulful melodies that define our sound. Join us on a musical journey that speaks to the heart.',
+    title: 'Humble Band',
+    description: 'Funky Roots Music from Wheeling, WV / Charlottesville, VA.',
     siteName: 'Humble Band',
     images: [
       {
