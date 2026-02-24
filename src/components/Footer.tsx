@@ -56,18 +56,13 @@ export default function Footer() {
           <div className="flex flex-col items-center text-center space-y-4">
             <button
               onClick={() => scrollToSection('hero')}
-              className="flex items-center gap-3 hover:opacity-80 transition-opacity cursor-pointer"
+              className="hover:opacity-80 transition-opacity cursor-pointer"
             >
               <img
-                src="/img/logo.webp"
-                alt="Humble Band Logo"
-                width={36}
-                height={36}
-                className="h-9 w-9 object-contain"
+                src="/img/humble-glitch.webp"
+                alt="Humble Band"
+                className="w-50 h-28"
               />
-              <span className="text-2xl font-bold bg-gradient-to-r from-orange-500 to-[#346703] bg-clip-text text-transparent">
-                humble band
-              </span>
             </button>
           </div>
 
@@ -132,7 +127,7 @@ export default function Footer() {
       {/* Bottom bar */}
       <div className="border-t border-gray-900">
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col items-center gap-1">
-          <p className="text-gray-400 text-xs tracking-widest uppercase">
+          <p className="text-orange-400 text-xs tracking-widest uppercase">
             Funky Roots Music
           </p>
           <p className="text-gray-600 text-xs">

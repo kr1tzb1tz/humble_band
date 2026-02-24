@@ -1,4 +1,4 @@
-import type { Metadata } from "next";
+import type { Metadata, Viewport } from "next";
 import { Inter, Playfair_Display } from "next/font/google";
 import "./globals.css";
 import Providers from "./providers";
@@ -19,6 +19,10 @@ const playfair = Playfair_Display({
 });
 
 export { metadata };
+
+export const viewport: Viewport = {
+  viewportFit: 'cover',
+};
 export default function RootLayout({
   children,
 }: Readonly<{

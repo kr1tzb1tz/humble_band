@@ -111,7 +111,7 @@
 }
 
 body {
-  background-color: hsl(var(--background));
+  background-color: #000;
   color: hsl(var(--foreground));
 }
 
@@ -198,6 +198,14 @@ body {
 
 .animate-float-slow {
   animation: float-slow 8s ease-in-out infinite;
+}
+
+/* Mobile landscape: push hero content below the fixed nav */
+@media (orientation: landscape) and (max-height: 600px) {
+  .hero-overlay {
+    align-items: flex-start;
+    padding-top: 5rem;
+  }
 }
 
 /* Hero background image responsive positioning */
