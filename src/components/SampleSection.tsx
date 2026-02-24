@@ -64,8 +64,14 @@ export default function SampleSection() {
 
   return (
     <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black border-y border-white/20">
-      {/* Background gradient */}
-      <div className="absolute inset-0 z-0 bg-gradient-to-br from-gray-950 via-black to-orange-950/20"></div>
+      {/* Background Image */}
+      <div className="absolute inset-0 z-0">
+        <picture className="w-full h-full">
+          <source media="(max-width: 639px)" srcSet="/img/van-mobile.webp" />
+          <img src="/img/van.webp" alt="" className="w-full h-full object-cover" />
+        </picture>
+        <div className="absolute inset-0 bg-black/50"></div>
+      </div>
       
       <div className="relative z-10 text-center max-w-4xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="space-y-8 animate-in fade-in slide-in-from-bottom-8 duration-2000">
@@ -161,22 +167,21 @@ export default function SampleSection() {
 
       {/* Floating Particles Throughout Hero */}
       <div className="absolute inset-0 pointer-events-none overflow-hidden">
-        {/* Particle 1 */}
         <div className="absolute top-1/4 left-1/4 w-2 h-2 bg-orange-400/60 rounded-full animate-float-slow"></div>
-        {/* Particle 2 */}
-        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-red-400/50 rounded-full animate-float-slow" style={{ animationDelay: '2s' }}></div>
-        {/* Particle 3 */}
-        <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-pink-400/60 rounded-full animate-float-slow" style={{ animationDelay: '4s' }}></div>
-        {/* Particle 4 */}
+        <div className="absolute top-1/3 right-1/3 w-1 h-1 bg-orange-400/50 rounded-full animate-float-slow" style={{ animationDelay: '2s' }}></div>
+        <div className="absolute bottom-1/3 left-1/3 w-1.5 h-1.5 bg-orange-400/60 rounded-full animate-float-slow" style={{ animationDelay: '4s' }}></div>
         <div className="absolute top-1/2 right-1/4 w-1 h-1 bg-orange-300/50 rounded-full animate-float-slow" style={{ animationDelay: '1s' }}></div>
-        {/* Particle 5 */}
-        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-red-300/40 rounded-full animate-float-slow" style={{ animationDelay: '3s' }}></div>
-        {/* Particle 6 */}
-        <div className="absolute top-1/3 left-1/2 w-1 h-1 bg-pink-300/50 rounded-full animate-float-slow" style={{ animationDelay: '5s' }}></div>
-        {/* Particle 7 */}
+        <div className="absolute bottom-1/4 left-1/2 w-2 h-2 bg-orange-300/40 rounded-full animate-float-slow" style={{ animationDelay: '3s' }}></div>
+        <div className="absolute top-1/3 left-1/2 w-1 h-1 bg-orange-400/50 rounded-full animate-float-slow" style={{ animationDelay: '5s' }}></div>
         <div className="absolute bottom-1/3 right-1/2 w-1.5 h-1.5 bg-orange-500/40 rounded-full animate-float-slow" style={{ animationDelay: '2.5s' }}></div>
-        {/* Particle 8 */}
-        <div className="absolute top-1/2 left-1/3 w-1 h-1 bg-red-500/50 rounded-full animate-float-slow" style={{ animationDelay: '3.5s' }}></div>
+        <div className="absolute top-1/2 left-1/3 w-1 h-1 bg-orange-500/50 rounded-full animate-float-slow" style={{ animationDelay: '3.5s' }}></div>
+        <div className="absolute top-[15%] right-[20%] w-1.5 h-1.5 bg-orange-400/45 rounded-full animate-float-slow" style={{ animationDelay: '1.5s' }}></div>
+        <div className="absolute bottom-[20%] right-[35%] w-1 h-1 bg-orange-400/50 rounded-full animate-float-slow" style={{ animationDelay: '4.5s' }}></div>
+        <div className="absolute top-[70%] left-[15%] w-2 h-2 bg-orange-300/35 rounded-full animate-float-slow" style={{ animationDelay: '0.5s' }}></div>
+        <div className="absolute top-[10%] left-[40%] w-1 h-1 bg-orange-400/55 rounded-full animate-float-slow" style={{ animationDelay: '6s' }}></div>
+        <div className="absolute top-[85%] right-[15%] w-1.5 h-1.5 bg-orange-300/45 rounded-full animate-float-slow" style={{ animationDelay: '1.2s' }}></div>
+        <div className="absolute top-[45%] left-[8%] w-1 h-1 bg-orange-500/50 rounded-full animate-float-slow" style={{ animationDelay: '3.8s' }}></div>
+        <div className="absolute top-[25%] right-[8%] w-2 h-2 bg-orange-400/40 rounded-full animate-float-slow" style={{ animationDelay: '2.2s' }}></div>
       </div>
     </section>
   );
