@@ -50,24 +50,10 @@ export default function Footer() {
       <div className="h-px w-full bg-gradient-to-r from-[#346703] via-[#4a8a05] to-orange-500" />
 
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-16">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-12 max-w-3xl mx-auto items-center">
-
-          {/* Brand */}
-          <div className="flex flex-col items-center text-center space-y-4">
-            <button
-              onClick={() => scrollToSection('hero')}
-              className="hover:opacity-80 transition-opacity cursor-pointer"
-            >
-              <img
-                src="/img/humble-glitch.webp"
-                alt="Humble Band"
-                className="w-50 h-28"
-              />
-            </button>
-          </div>
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-20 max-w-4xl mx-auto items-start">
 
           {/* Navigation */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center md:items-start md:text-left">
             <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">
               Navigate
             </h4>
@@ -85,8 +71,22 @@ export default function Footer() {
             </ul>
           </div>
 
+          {/* Brand */}
+          <div className="flex flex-col items-center text-center space-y-4">
+            <button
+              onClick={() => scrollToSection('hero')}
+              className="hover:opacity-80 transition-opacity cursor-pointer"
+            >
+              <img
+                src="/img/humble-glitch.webp"
+                alt="Humble Band"
+                className="w-50 h-28"
+              />
+            </button>
+          </div>
+
           {/* Social & Streaming */}
-          <div className="flex flex-col items-center text-center">
+          <div className="flex flex-col items-center text-center md:items-end md:text-right">
             <h4 className="text-xs font-semibold tracking-[0.2em] uppercase text-gray-500 mb-5">
               Follow &amp; Listen
             </h4>
