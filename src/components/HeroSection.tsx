@@ -16,7 +16,7 @@ export default function HeroSection() {
           ]}
           className="min-h-screen"
         >
-          <div className="hero-overlay absolute inset-0 z-20 flex items-center justify-center px-6 sm:px-8">
+          <div className="hero-overlay absolute inset-0 z-20 flex items-center justify-center px-6 sm:px-8 pt-16">
 
             {/* ── Desktop layout ── */}
             <div className="hidden lg:flex items-center justify-center gap-16 xl:gap-24 w-full max-w-6xl">
@@ -71,12 +71,12 @@ export default function HeroSection() {
             </div>
 
             {/* ── Mobile layout ── */}
-            <div className="lg:hidden flex flex-col items-center text-center space-y-6 w-full">
-              <div className="flex flex-col items-center gap-4">
+            <div className="lg:hidden flex flex-col items-center text-center space-y-4 sm:space-y-6 w-full pb-12">
+              <div className="flex flex-col items-center gap-3 sm:gap-4">
                 <img
                   src="/img/sal-album-1.webp"
                   alt="Humble Band - Greetings from Sal Paradise EP"
-                  className="w-56 h-56 sm:w-64 sm:h-64 rounded-xl shadow-2xl border border-white/10"
+                  className="w-44 h-44 sm:w-56 sm:h-56 rounded-xl shadow-2xl border border-white/10"
                 />
                 <p className="text-xs font-bold tracking-[0.3em] uppercase text-orange-400">
                   New EP · Out Now

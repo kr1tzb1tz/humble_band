@@ -63,7 +63,7 @@ export default function SampleSection() {
   }, []);
 
   return (
-    <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black border-y border-white/20">
+    <section id="sample" className="relative min-h-screen flex items-center justify-center overflow-hidden bg-black">
       {/* Background Image */}
       <div className="absolute inset-0 z-0">
         <picture className="w-full h-full">

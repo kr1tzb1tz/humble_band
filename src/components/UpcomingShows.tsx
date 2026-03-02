@@ -20,7 +20,7 @@ const shows = [
 
 export default function UpcomingShows() {
   return (
-    <section id="upcoming-shows" className="py-24 bg-gray-900">
+    <section id="upcoming-shows" className="py-24 bg-black">
       <div className="container mx-auto px-4 sm:px-6 lg:px-8 max-w-5xl">
 
         {/* Heading */}
@@ -31,21 +31,12 @@ export default function UpcomingShows() {
           <div className="w-24 h-1 bg-gradient-to-r from-[#346703] to-orange-500 rounded-full mx-auto mt-4" />
         </div>
 
-        {/* Band Photo */}
-        <div className="mb-12 rounded-2xl overflow-hidden shadow-2xl">
-          <img
-            src="/img/the-band.webp"
-            alt="Humble Band"
-            className="w-full aspect-[16/9] object-cover object-center"
-          />
-        </div>
-
         {/* Cards */}
         <div className="grid grid-cols-1 md:grid-cols-2 gap-8">
           {shows.map((show) => (
             <div
               key={show.month + show.day}
-              className="group relative bg-gray-950 rounded-3xl overflow-hidden border border-gray-800 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:-translate-y-1"
+              className="group relative bg-gray-900 rounded-3xl overflow-hidden border border-gray-800 hover:border-orange-500/40 transition-all duration-300 hover:shadow-2xl hover:shadow-orange-500/10 hover:-translate-y-1"
             >
               {/* Top gradient accent bar */}
               <div className="h-1.5 w-full bg-gradient-to-r from-[#346703] via-[#4a8a05] to-orange-500" />
@@ -53,7 +44,7 @@ export default function UpcomingShows() {
               <div className="p-8">
                 {/* Date badge */}
                 <div className="mb-6">
-                  <div className="bg-gray-900 rounded-2xl px-5 py-4 text-center inline-block min-w-[76px]">
+                  <div className="bg-black rounded-2xl px-5 py-4 text-center inline-block min-w-[76px]">
                     <div className="text-orange-500 text-xs font-bold tracking-[0.25em] uppercase">
                       {show.month}
                     </div>

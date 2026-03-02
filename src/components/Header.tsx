@@ -1,12 +1,11 @@
 'use client';
 
-import { Menu, X } from 'lucide-react';
 import { useState, useEffect } from 'react';
 
 const navLinks = [
-  { label: 'Home', section: 'hero' },
-  { label: 'Listen', section: 'sample' },
-  { label: 'Upcoming Shows', section: 'upcoming-shows' },
+  { label: 'About', section: 'meet-the-band' },
+  { label: 'Sample', section: 'sample' },
+  { label: 'Shows', section: 'upcoming-shows' },
 ];
 
 export default function Header() {
@@ -27,9 +26,7 @@ export default function Header() {
   return (
     <header
       className={`fixed top-0 left-0 right-0 z-50 text-white transition-all duration-300 ${
-        scrolled
-          ? 'bg-black/90 backdrop-blur-md border-b border-white/5'
-          : 'bg-transparent'
+        scrolled || isMenuOpen ? 'bg-black/90 backdrop-blur-md' : 'bg-transparent'
       }`}
     >
       <div className="container mx-auto px-4 sm:px-6 lg:px-8">
@@ -68,10 +65,14 @@ export default function Header() {
           {/* Mobile Toggle */}
           <button
             onClick={() => setIsMenuOpen(!isMenuOpen)}
-            className="md:hidden text-white/80 hover:text-white transition-colors p-1"
+            className="md:hidden text-white/80 hover:text-white p-1"
             aria-label="Toggle menu"
           >
-            {isMenuOpen ? <X size={22} /> : <Menu size={22} />}
+            <div className="w-[22px] h-[18px] flex flex-col justify-between">
+              <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? 'rotate-45 translate-y-[8px]' : ''}`} />
+              <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? 'opacity-0 scale-x-0' : ''}`} />
+              <span className={`block h-[2px] w-full bg-current rounded-full transition-all duration-300 ease-in-out ${isMenuOpen ? '-rotate-45 -translate-y-[8px]' : ''}`} />
+            </div>
           </button>
 
         </div>
@@ -79,22 +80,24 @@ export default function Header() {
 
       {/* Mobile Menu */}
       <div
-        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out bg-black/95 backdrop-blur-md border-t border-b border-white/20 ${
+        className={`md:hidden overflow-hidden transition-all duration-300 ease-in-out ${
           isMenuOpen ? 'max-h-48 opacity-100' : 'max-h-0 opacity-0'
         }`}
       >
-        <nav className="container mx-auto px-4 sm:px-6 py-3 flex flex-col gap-1">
+        <nav className="container mx-auto px-4 sm:px-6 py-3 flex flex-col gap-1 items-center">
           {navLinks.map((link) => (
             <button
               key={link.section}
               onClick={() => scrollToSection(link.section)}
-              className="text-left py-2.5 px-3 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer"
+              className="text-center py-2.5 px-3 rounded-lg text-sm text-white/70 hover:text-white hover:bg-white/5 transition-all duration-200 cursor-pointer w-full"
             >
               {link.label}
             </button>
           ))}
         </nav>
       </div>
+      {/* Gradient border — matches footer top */}
+      <div className={`h-px w-full bg-gradient-to-r from-[#346703] via-[#4a8a05] to-orange-500 transition-opacity duration-300 ${scrolled ? 'opacity-100' : 'opacity-0'}`} />
     </header>
   );
 }

@@ -4,9 +4,9 @@ import { Instagram, Facebook } from 'lucide-react';
 import { SiSpotify, SiApplemusic } from "react-icons/si";
 
 const navLinks = [
-  { label: "Home", section: "hero" },
-  { label: "Listen", section: "sample" },
-  { label: "Upcoming Shows", section: "upcoming-shows" },
+  { label: "About", section: "meet-the-band" },
+  { label: "Sample", section: "sample" },
+  { label: "Shows", section: "upcoming-shows" },
 ];
 
 const socialLinks = [
@@ -80,7 +80,7 @@ export default function Footer() {
               <img
                 src="/img/humble-glitch.webp"
                 alt="Humble Band"
-                className="w-50 h-28"
+                className="w-28 h-auto sm:w-36 md:w-44"
               />
             </button>
           </div>
@@ -125,7 +125,7 @@ export default function Footer() {
       </div>
 
       {/* Bottom bar */}
-      <div className="border-t border-gray-900">
+      <div>
         <div className="container mx-auto px-4 sm:px-6 lg:px-8 py-5 flex flex-col items-center gap-1">
           <p className="text-orange-400 text-xs tracking-widest uppercase">
             Funky Roots Music

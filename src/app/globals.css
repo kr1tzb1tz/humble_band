@@ -208,6 +208,14 @@ body {
   }
 }
 
+/* Short portrait screens (e.g. iPhone SE): top-align so content clears the nav */
+@media (orientation: portrait) and (max-height: 700px) {
+  .hero-overlay {
+    align-items: flex-start;
+    padding-top: 5rem;
+  }
+}
+
 /* Hero background image responsive positioning */
 .hero-bg-image {
   object-position: center 30%;
