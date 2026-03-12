@@ -130,7 +130,7 @@ export default function SampleSection() {
           }`}>
             <div className="space-y-4">
               <p className="text-xl md:text-2xl lg:text-3xl text-gray-200 max-w-4xl mx-auto leading-relaxed drop-shadow-lg text-center">
-                Preview of <span className="font-bold text-orange-500">"Ghostride"</span> from our new EP.
+                <span className="font-bold text-orange-500">"Gather It Up"</span> from our new EP
               </p>
             </div>
           </div>
@@ -158,7 +158,7 @@ export default function SampleSection() {
         preload="metadata"
         controls={false}
       >
-        <source src="/Ghostride_mix_2_L_MASTERED.mp3" type="audio/mpeg" />
+        <source src="/Gather_It_Up.mp3" type="audio/mpeg" />
         {/* OLD AUDIO SOURCE - COMMENTED OUT
         <source src="/BrownstonesLive.m4a" type="audio/mp4" />
         */}
