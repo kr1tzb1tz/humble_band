@@ -3,6 +3,21 @@ import { MapPin } from "lucide-react";
 
 const shows = [
   {
+    month: "APR",
+    day: "17",
+    year: "2026",
+    name: "The Silver Rail",
+    location: "Wheeling, WV",
+    time: "9PM",
+  },
+  {
+    month: "APR",
+    day: "18",
+    year: "2026",
+    name: "Private Event",
+    location: "Pittsburgh, PA",
+  },
+  {
     month: "JUL",
     day: "24",
     year: "2026",
@@ -67,6 +82,11 @@ export default function UpcomingShows() {
                   <MapPin className="h-4 w-4 text-[#4a8a05] flex-shrink-0" />
                   <span className="text-gray-400 text-base">{show.location}</span>
                 </div>
+
+                {/* Time */}
+                {"time" in show && (
+                  <div className="mt-2 text-gray-500 text-sm">{show.time}</div>
+                )}
               </div>
             </div>
           ))}
