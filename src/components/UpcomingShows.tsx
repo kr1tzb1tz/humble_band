@@ -31,6 +31,15 @@ const shows = [
     name: "FunFest Fridays at Wheeling Park",
     location: "Wheeling, WV",
   },
+  {
+    month: "SEP",
+    day: "19",
+    year: "2026",
+    name: "One World West Brewing",
+    location: "Asheville, NC",
+    time: "9:00 - 12:00",
+    tickets: "$10 tickets",
+  },
 ];
 
 export default function UpcomingShows() {
@@ -86,6 +95,11 @@ export default function UpcomingShows() {
                 {/* Time */}
                 {"time" in show && (
                   <div className="mt-2 text-gray-500 text-sm">{show.time}</div>
+                )}
+
+                {/* Tickets */}
+                {"tickets" in show && (
+                  <div className="mt-2 text-orange-400 text-sm font-medium">{show.tickets}</div>
                 )}
               </div>
             </div>
