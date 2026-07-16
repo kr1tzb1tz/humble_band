@@ -3,23 +3,8 @@ import { MapPin } from "lucide-react";
 
 const shows = [
   {
-    month: "APR",
-    day: "17",
-    year: "2026",
-    name: "The Silver Rail",
-    location: "Wheeling, WV",
-    time: "9PM",
-  },
-  {
-    month: "APR",
-    day: "18",
-    year: "2026",
-    name: "Private Event",
-    location: "Pittsburgh, PA",
-  },
-  {
     month: "JUL",
-    day: "24",
+    day: "25",
     year: "2026",
     name: "Rivanna Roots Concert Series",
     location: "Charlottesville, VA",
