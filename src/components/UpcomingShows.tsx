@@ -3,18 +3,12 @@ import { MapPin } from "lucide-react";
 
 const shows = [
   {
-    month: "JUL",
-    day: "25",
+    month: "SEP",
+    day: "18",
     year: "2026",
-    name: "Rivanna Roots Concert Series",
-    location: "Charlottesville, VA",
-  },
-  {
-    month: "AUG",
-    day: "28",
-    year: "2026",
-    name: "FunFest Fridays at Wheeling Park",
-    location: "Wheeling, WV",
+    name: "Greenbriar Valley Brewing Company",
+    location: "Maxwelton, WV",
+    time: "6:00 - 9:00 pm",
   },
   {
     month: "SEP",
